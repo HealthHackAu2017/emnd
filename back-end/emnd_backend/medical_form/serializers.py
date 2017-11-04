@@ -1,14 +1,13 @@
 from rest_framework import serializers
-from medical_form.models import medical_form
+from medical_form.models import Submission
 
 
-class SnippetSerializer(serializers.Serializer):
-    id = serializers.IntegerField(read_only=True)
-    user_id = serializers.IntegerField(read_only=True)
-    q1 = serializers.IntegerField()
-    q2 = serializers.IntegerField()
-    q3 = serializers.IntegerField()
-    q1 = serializers.IntegerField()
+class SubmissionSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Submission
+        fields = ('id', 'user_id', 'q1', 'q2', 'q3')
+
     #linenos = serializers.BooleanField(required=False)
     #language = serializers.ChoiceField(choices=LANGUAGE_CHOICES, default='python')
     #style = serializers.ChoiceField(choices=STYLE_CHOICES, default='friendly')
