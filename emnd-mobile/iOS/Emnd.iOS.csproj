@@ -322,6 +322,21 @@
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json" />
     <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\40x40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\60x60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\58x58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\87x87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\80x80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\120x120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\180x180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\20x20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\29x29.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\76x76.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\152x152.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\167x167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\1024x1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\48x48.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon-3.appiconset\55x55.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\HorseProfileProfileView.cs" />
@@ -346,6 +361,18 @@
     <Compile Include="Views\ProfileView.designer.cs">
       <DependentUpon>ProfileView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\BodyView.cs" />
+    <Compile Include="Views\BodyView.designer.cs">
+      <DependentUpon>BodyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuView.cs" />
+    <Compile Include="Views\MenuView.designer.cs">
+      <DependentUpon>MenuView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SurveyEntryView.cs" />
+    <Compile Include="Views\SurveyEntryView.designer.cs">
+      <DependentUpon>SurveyEntryView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -361,6 +388,9 @@
     <InterfaceDefinition Include="Views\TabRootView.storyboard" />
     <InterfaceDefinition Include="Views\SurveyView.storyboard" />
     <InterfaceDefinition Include="Views\ProfileView.storyboard" />
+    <InterfaceDefinition Include="Views\BodyView.storyboard" />
+    <InterfaceDefinition Include="Views\MenuView.storyboard" />
+    <InterfaceDefinition Include="Views\SurveyEntryView.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -385,6 +415,42 @@
     <BundleResource Include="Resources\Account.png" />
     <BundleResource Include="Resources\Account%402x.png" />
     <BundleResource Include="Resources\Account%403x.png" />
+    <BundleResource Include="Resources\Appointments.png" />
+    <BundleResource Include="Resources\Appointments%402x.png" />
+    <BundleResource Include="Resources\Appointments%403x.png" />
+    <BundleResource Include="Resources\Diary.png" />
+    <BundleResource Include="Resources\Diary%402x.png" />
+    <BundleResource Include="Resources\Diary%403x.png" />
+    <BundleResource Include="Resources\Mnd.png" />
+    <BundleResource Include="Resources\Mnd%402x.png" />
+    <BundleResource Include="Resources\Mnd%403x.png" />
+    <BundleResource Include="Resources\Profile.png" />
+    <BundleResource Include="Resources\Profile%402x.png" />
+    <BundleResource Include="Resources\Profile%403x.png" />
+    <BundleResource Include="Resources\Research.png" />
+    <BundleResource Include="Resources\Research%402x.png" />
+    <BundleResource Include="Resources\Research%403x.png" />
+    <BundleResource Include="Resources\Team.png" />
+    <BundleResource Include="Resources\Team%402x.png" />
+    <BundleResource Include="Resources\Team%403x.png" />
+    <BundleResource Include="Resources\BodyModel.png" />
+    <BundleResource Include="Resources\BodyModel%402x.png" />
+    <BundleResource Include="Resources\BodyModel%403x.png" />
+    <BundleResource Include="Resources\Splashmnd.png" />
+    <BundleResource Include="Resources\Splashmnd%402x.png" />
+    <BundleResource Include="Resources\Splashmnd%403x.png" />
+    <BundleResource Include="Resources\BodymapComplete.png" />
+    <BundleResource Include="Resources\BodymapHeadComplete.png" />
+    <BundleResource Include="Resources\BodymapHeadnNeckComplete.png" />
+    <BundleResource Include="Resources\BodymapHeadnNecknLungsComplete.png" />
+    <BundleResource Include="Resources\BodymapHNlLSALComplete.png" />
+    <BundleResource Include="Resources\BodymapHeadNeckLungsLstomachArmsComplete.png" />
+    <BundleResource Include="Resources\BodymapSilhouetteComplete.png" />
+    <BundleResource Include="Resources\Neck.png" />
+    <BundleResource Include="Resources\Lungs.png" />
+    <BundleResource Include="Resources\SliderButton.png" />
+    <BundleResource Include="Resources\SliderButton%402x.png" />
+    <BundleResource Include="Resources\SliderButton%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Remove="iTunesArtwork%402x" />

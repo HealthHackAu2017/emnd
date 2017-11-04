@@ -4,6 +4,9 @@ using UIKit;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using MvvmCross.iOS.Views.Presenters.Attributes;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
+using Serilog;
 
 namespace Emnd.iOS
 {
@@ -14,5 +17,21 @@ namespace Emnd.iOS
         public SurveyView (IntPtr handle) : base (handle)
         {
         }
+
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+            Log.Information("Survey View appeared");
+        }
+
+
+        Xamarin.Forms.Page SurveyListPage;
+        private void ShowSurveyListPage()
+        {
+            SurveyListPage = new SurveyListPage();
+            var pageViewController = SurveyListPage.CreateViewController();
+            this.NavigationController.PushViewController(pageViewController, false);
+        }
+
     }
 }

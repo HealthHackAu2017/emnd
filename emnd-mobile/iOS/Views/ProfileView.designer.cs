@@ -7,12 +7,14 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
-using UIKit;
 
 namespace Emnd.iOS
 {
     [Register ("ProfileView")]
     partial class ProfileView
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

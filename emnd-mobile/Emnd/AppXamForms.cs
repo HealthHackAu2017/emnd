@@ -5,7 +5,7 @@ using Xamarin.Forms.Xaml;
 //
 // This page is displayed from within 'native' pages on iOS and Android
 //
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+//[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Emnd
 {
     public class AppXamForms : Xamarin.Forms.Application

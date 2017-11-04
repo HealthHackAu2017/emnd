@@ -14,7 +14,6 @@ def submission_list(request):
         submissions = Submission.objects.all()
         serializer = SubmissionSerializer(submissions, many=True)
         return Response(serializer.data)
-
     elif request.method == 'POST':
         serializer = SubmissionSerializer(data=request.data)
         if serializer.is_valid():
