@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^auth-token/', obtain_jwt_token),
     url(r'^auth-token-verify/', verify_jwt_token),
     url(r'^', include('medical_form.urls')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

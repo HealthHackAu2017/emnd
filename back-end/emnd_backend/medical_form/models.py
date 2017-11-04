@@ -13,5 +13,6 @@ class Submission(models.Model):
     q1 = models.IntegerField()
     q2 = models.IntegerField()
     q3 = models.IntegerField()
-#    class Meta:
-#       ordering = ('created',)
+
+    class Meta:
+        ordering = ('submission_date',)
