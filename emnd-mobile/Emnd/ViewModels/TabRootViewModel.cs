@@ -26,6 +26,8 @@ namespace Emnd
         private async Task ShowInitialViewModels()
         {
             var tasks = new List<Task>();
+            tasks.Add(_navigationService.Navigate<MenuViewModel>());
+            tasks.Add(_navigationService.Navigate<BodyViewModel>());
             tasks.Add(_navigationService.Navigate<SurveyViewModel>());
             tasks.Add(_navigationService.Navigate<ProfileViewModel>());
             await Task.WhenAll(tasks);

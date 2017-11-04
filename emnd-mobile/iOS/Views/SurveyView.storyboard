@@ -31,5 +31,12 @@
     <resources>
         <image name="home.png" width="32" height="32"/>
         <image name="Account.png" width="32" height="32"/>
+        <image name="Appointments.png" width="235" height="233"/>
+        <image name="Diary.png" width="235" height="233"/>
+        <image name="Mnd.png" width="235" height="233"/>
+        <image name="Profile.png" width="235" height="233"/>
+        <image name="Research.png" width="235" height="233"/>
+        <image name="Team.png" width="235" height="233"/>
+        <image name="BodyModel.png" width="238" height="731"/>
     </resources>
 </document>

@@ -16,34 +16,22 @@ namespace Emnd.iOS
     {
         public ProfileView(IntPtr handle) : base(handle)
         {
-            if (this.HelloButton != null)
-            {
-                HelloButton.TouchUpInside += (sender, e) =>
-                {
-                    Log.Error("Done");
-                };
-            }
-            else
-            {
-                Log.Error("Not Found");
-
-            }
-        }
+         }
 
         public override void ViewDidLoad()
         {
-            if (this.HelloButton != null)
-            {
-                HelloButton.TouchUpInside += (sender, e) =>
-                {
-                    Log.Error("Done");
-                };
-            }
-            else
-            {
-                Log.Error("Not Found");
+            //if (this.HelloButton != null)
+            //{
+            //    HelloButton.TouchUpInside += (sender, e) =>
+            //    {
+            //        Log.Error("Done");
+            //    };
+            //}
+            //else
+            //{
+            //    Log.Error("Not Found");
 
-            }
+            //}
 
         }
 
@@ -51,20 +39,6 @@ namespace Emnd.iOS
         {
             base.ViewDidAppear(animated);
             Log.Information("Profile View appear");
-
-            if (this.HelloButton != null)
-            {
-                HelloButton.TouchUpInside += (sender, e) =>
-                {
-                    Log.Error("Done");
-                };
-            }
-            else
-            {
-                Log.Error("Not Found");
-
-            }
-            //ShowSurveyListPage();
         }
 
         Xamarin.Forms.Page SurveyListPage;

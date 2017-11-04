@@ -8,7 +8,6 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using Serilog;
 
-
 namespace Emnd.iOS
 {
     [MvxFromStoryboard("SurveyView")]
@@ -22,7 +21,7 @@ namespace Emnd.iOS
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-            Log.Information("Survey View appearred");
+            Log.Information("Survey View appeared");
         }
 
 

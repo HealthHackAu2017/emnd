@@ -361,6 +361,14 @@
     <Compile Include="Views\ProfileView.designer.cs">
       <DependentUpon>ProfileView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\BodyView.cs" />
+    <Compile Include="Views\BodyView.designer.cs">
+      <DependentUpon>BodyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuView.cs" />
+    <Compile Include="Views\MenuView.designer.cs">
+      <DependentUpon>MenuView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -376,8 +384,10 @@
     <InterfaceDefinition Include="Views\TabRootView.storyboard" />
     <InterfaceDefinition Include="Views\SurveyView.storyboard" />
     <InterfaceDefinition Include="Views\ProfileView.storyboard" />
-    <InterfaceDefinition Include="Views\DashboardView.storyboard" />
-    <InterfaceDefinition Include="Views\BodyMap.storyboard" />
+    <InterfaceDefinition Include="Views\BodymapView.storyboard" />
+    <InterfaceDefinition Include="Views\Storyboard.storyboard" />
+    <InterfaceDefinition Include="Views\BodyView.storyboard" />
+    <InterfaceDefinition Include="Views\MenuView.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

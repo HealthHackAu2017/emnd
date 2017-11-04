@@ -5,15 +5,15 @@ using Plugin.Toasts;
 
 namespace Emnd
 {
-    public class DashboardViewModel : MvxViewModel
+    public class MenuViewModel : MvxViewModel
     {
         private readonly IMvxNavigationService _navigationService;
         public string UserName { get; set; }
 
-        public DashboardViewModel(IMvxNavigationService navigationService)
+        public MenuViewModel(IMvxNavigationService navigationService)
         {
             _navigationService = navigationService;
-            UserName = "Hello binding";
+            //UserName = "Hello binding";
         }
     }
 }

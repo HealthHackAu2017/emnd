@@ -90,7 +90,9 @@
     <Compile Include="Views\DashboardPage.xaml.cs">
       <DependentUpon>DashboardPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\BodymapViewModel.cs" />
+    <Compile Include="ViewModels\BodyViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.UserDialogs">
