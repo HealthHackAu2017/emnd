@@ -6,7 +6,7 @@ class SubmissionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Submission
-        fields = ('id', 'user_id', 'q1', 'q2', 'q3')
+        fields = ('id', 'submission_date','user_id', 'q1', 'q2', 'q3')
 
     #linenos = serializers.BooleanField(required=False)
     #language = serializers.ChoiceField(choices=LANGUAGE_CHOICES, default='python')
