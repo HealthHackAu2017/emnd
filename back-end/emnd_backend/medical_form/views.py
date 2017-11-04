@@ -3,7 +3,13 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from medical_form.models import Submission
 from medical_form.serializers import SubmissionSerializer
+from rest_framework.permissions import IsAdminUser
 
+
+# Seperate the views to apply permission to get and post methods
+# Add the following line under API view, like below
+# @api_view([...])
+# @permission_classes((IsAdminUser, ))
 
 @api_view(['GET', 'POST'])
 def submission_list(request):

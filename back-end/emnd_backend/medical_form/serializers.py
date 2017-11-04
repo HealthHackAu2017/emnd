@@ -16,7 +16,7 @@ class SubmissionSerializer(serializers.ModelSerializer):
         """
         Create and return a new `Snippet` instance, given the validated data.
         """
-        return medical_form.objects.create(**validated_data)
+        return Submission.objects.create(**validated_data)
 
     def update(self, instance, validated_data):
         """
@@ -27,8 +27,8 @@ class SubmissionSerializer(serializers.ModelSerializer):
         instance.q2 = validated_data.get('q2', instance.q1)
         instance.q3 = validated_data.get('q3', instance.q1)
 
-       # instance.linenos = validated_data.get('linenos', instance.linenos)
-       # instance.language = validated_data.get('language', instance.language)
-       # instance.style = validated_data.get('style', instance.style)
+        # instance.linenos = validated_data.get('linenos', instance.linenos)
+        # instance.language = validated_data.get('language', instance.language)
+        # instance.style = validated_data.get('style', instance.style)
         instance.save()
         return instance
