@@ -346,6 +346,10 @@
     <Compile Include="Views\ProfileView.designer.cs">
       <DependentUpon>ProfileView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SurveyListView.cs" />
+    <Compile Include="Views\SurveyListView.designer.cs">
+      <DependentUpon>SurveyListView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -361,6 +365,7 @@
     <InterfaceDefinition Include="Views\TabRootView.storyboard" />
     <InterfaceDefinition Include="Views\SurveyView.storyboard" />
     <InterfaceDefinition Include="Views\ProfileView.storyboard" />
+    <InterfaceDefinition Include="Views\SurveyListView.xib" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

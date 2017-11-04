@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Emnd.SurveyEntryCell" xmlns:local="clr-namespace:Emnd;assembly=Emnd" xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize">
+    <StackLayout Orientation="Horizontal" Margin="0,0,0,0">
+        <!-- nb. an IconImage cannot have a null Icon and IsVisible="false" does not keep the indentation for layout -->
+        <iconize:IconImage x:Name="ProfileEntryIcon" HeightRequest="20" WidthRequest="20" Margin="8,0" Icon="md-radio-button-unchecked" IconColor="Transparent" />
+        <Label x:Name="ProfileEntryLabel" VerticalTextAlignment="Center" Margin="0,0,0,0" WidthRequest="60" MinimumWidthRequest="60" FontSize="Micro" TextColor="Gray" />
+        <local:LineEntry x:Name="ProfileEntry" BorderColor="Transparent" Margin="0,0,0,0" HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
+</ViewCell>

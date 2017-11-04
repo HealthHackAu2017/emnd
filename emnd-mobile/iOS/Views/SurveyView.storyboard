@@ -1,19 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="453">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Survey View-->
         <scene sceneID="452">
             <objects>
-                <viewController id="453" sceneMemberID="viewController" storyboardIdentifier="SurveyView" customClass="SurveyView">
+                <viewController storyboardIdentifier="SurveyView" id="453" customClass="SurveyView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="450"/>
                         <viewControllerLayoutGuide type="bottom" id="451"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="454">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -23,14 +27,4 @@
             <point key="canvasLocation" x="300" y="59"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="home.png" width="32" height="32"/>
-        <image name="Account.png" width="32" height="32"/>
-        <image name="Rewards.png" width="32" height="32"/>
-    </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>
