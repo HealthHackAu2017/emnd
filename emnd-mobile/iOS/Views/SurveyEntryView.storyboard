@@ -42,6 +42,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="707" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="154" y="233" width="267" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="714" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="154" y="314" width="164" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -50,6 +62,8 @@
                         <outlet property="WeightEntry" destination="466" id="name-outlet-466"/>
                         <outlet property="ParticipantIdEntry" destination="465" id="name-outlet-465"/>
                         <outlet property="MySlider" destination="463" id="name-outlet-463"/>
+                        <outlet property="SendButton" destination="714" id="name-outlet-714"/>
+                        <outlet property="MyLabel" destination="707" id="name-outlet-707"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="231" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,5 +81,16 @@
         <image name="Research.png" width="235" height="233"/>
         <image name="Team.png" width="235" height="233"/>
         <image name="BodyModel.png" width="238" height="731"/>
+        <image name="Splashmnd.png" width="117" height="136"/>
+        <image name="BodymapComplete.png" width="232" height="725"/>
+        <image name="BodymapHeadComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadnNeckComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadnNecknLungsComplete.png" width="238" height="731"/>
+        <image name="BodymapHNlLSALComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadNeckLungsLstomachArmsComplete.png" width="238" height="731"/>
+        <image name="BodymapSilhouetteComplete.png" width="238" height="731"/>
+        <image name="Neck.png" width="238" height="731"/>
+        <image name="Lungs.png" width="238" height="731"/>
+        <image name="SliderButton.png" width="54" height="54"/>
     </resources>
 </document>

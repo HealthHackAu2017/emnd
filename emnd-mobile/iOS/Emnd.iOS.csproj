@@ -388,7 +388,6 @@
     <InterfaceDefinition Include="Views\TabRootView.storyboard" />
     <InterfaceDefinition Include="Views\SurveyView.storyboard" />
     <InterfaceDefinition Include="Views\ProfileView.storyboard" />
-    <InterfaceDefinition Include="Views\BodymapView.storyboard" />
     <InterfaceDefinition Include="Views\BodyView.storyboard" />
     <InterfaceDefinition Include="Views\MenuView.storyboard" />
     <InterfaceDefinition Include="Views\SurveyEntryView.storyboard" />

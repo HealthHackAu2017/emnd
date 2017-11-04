@@ -10,8 +10,10 @@ namespace Emnd
     {
         private readonly IMvxNavigationService _navigationService;
         public IMvxAsyncCommand CloseViewModelCommand { get; private set; }
+        public IMvxAsyncCommand SendAsCSVCommand { get; private set; }
         public static Survey CurrentSurvey { get; set; }
-        public Survey Survey;
+        public Survey Survey { get; set; }
+        public SurveyQuestion D21 { get; set; }
 
         public SurveyEntryViewModel()
         {
@@ -19,6 +21,11 @@ namespace Emnd
 
             _navigationService = App.Instance._nav;
             CloseViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Close(this));
+            SendAsCSVCommand = new MvxAsyncCommand(async () => {
+                App.Navigation.ToastMessage("Sending CSV", CurrentSurvey.ParticipantName);                                            
+            });
+
+            Init();
         }
 
         public SurveyEntryViewModel(IMvxNavigationService navigationService)
@@ -32,6 +39,7 @@ namespace Emnd
         {
             Log.Information("Prepare view model with " + parameter);
             SectionName = parameter;
+            Init();
         }
 
         public void Init()
@@ -42,10 +50,16 @@ namespace Emnd
                 CurrentSurvey.ParticipantName = "John";
                 CurrentSurvey.ParticipantID = "1234";
                 CurrentSurvey.Weight = 74.0;
+
             }
 
-            this.Survey = CurrentSurvey;
-            RaiseAllPropertiesChanged();
+            if (this.Survey == null)
+            {
+                this.Survey = CurrentSurvey;
+                var q = Emnd.Survey.NewQuestions();
+                this.D21 = q.Find(e => e.QuestionVariable.Equals("D21"));
+                RaiseAllPropertiesChanged();
+            }
 
         }
     }

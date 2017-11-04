@@ -20,6 +20,10 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel MyLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UISlider MySlider { get; set; }
 
         [Outlet]
@@ -32,6 +36,10 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton SendButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField WeightEntry { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -39,6 +47,11 @@ namespace Emnd.iOS
             if (MainView != null) {
                 MainView.Dispose ();
                 MainView = null;
+            }
+
+            if (MyLabel != null) {
+                MyLabel.Dispose ();
+                MyLabel = null;
             }
 
             if (MySlider != null) {
@@ -54,6 +67,11 @@ namespace Emnd.iOS
             if (ParticipantNameEntry != null) {
                 ParticipantNameEntry.Dispose ();
                 ParticipantNameEntry = null;
+            }
+
+            if (SendButton != null) {
+                SendButton.Dispose ();
+                SendButton = null;
             }
 
             if (WeightEntry != null) {

@@ -27,13 +27,15 @@ namespace Emnd.iOS
             Log.Information("Survey Start load");
 
             this.NavigationItem.Title = "Start Here";
-            MySlider.SetThumbImage(UIImage.FromFile("Diary.png"), UIControlState.Normal);
+            MySlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
 
-            ViewModel.Init();
             var set = this.CreateBindingSet<SurveyEntryView, SurveyEntryViewModel>();
             set.Bind(ParticipantNameEntry).To(vm => vm.Survey.ParticipantName);
             set.Bind(ParticipantIdEntry).To(vm => vm.Survey.ParticipantID);
             set.Bind(WeightEntry).To(vm => vm.Survey.Weight);
+            set.Bind(MyLabel).To(vm => vm.D21.Question);
+            set.Bind(MySlider).To(vm => vm.D21.DefaultValue);
+            set.Bind(SendButton).To(vm => vm.SendAsCSVCommand);
             set.Apply();
 
             //this.FeedbackTextField.ShouldReturn += SearchBar_ShouldReturn;

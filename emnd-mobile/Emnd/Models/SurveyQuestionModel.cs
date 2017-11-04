@@ -71,7 +71,7 @@ namespace Emnd
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Today I feel", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Wellbeing", MinText = "Bad", MaxText = "Good" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D16", Question = "Compared to this time two weeks ago, I feel", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Wellbeing", MinText = "Bad", MaxText = "Good" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D20c", Question = "I am sleeping", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Wellbeing", MinText = "Poorly", MaxText = "Well" });
-                _questions.Add(new SurveyQuestion { QuestionVariable = "D21", Question = "Today I weigh", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Wellbeing", MinText = "", MaxText = "kg" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D21", Question = "Today I weigh", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 74, Section = "Wellbeing", MinText = "", MaxText = "kg" });
 
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Depression", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Mental Health", MinText = "Low", MaxText = "High" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Anxiety", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Mental Health", MinText = "Low", MaxText = "High" });
