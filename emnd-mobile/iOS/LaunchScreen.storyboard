@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="X5k-f2-b5h">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gAE-YM-kbH">
+            <objects>
+                <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y8P-hJ-Z43"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="1641">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1757" image="RQLogo512.png">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RQLogo512.png" width="512" height="512"/>
+        <image name="RQLogo192.png" width="191" height="192"/>
+        <image name="home.png" width="32" height="32"/>
+        <image name="ic_tabbar_menu.png" width="25" height="25"/>
+        <image name="settings.png" width="24" height="24"/>
+        <image name="Account.png" width="32" height="32"/>
+        <image name="BlackBook.png" width="32" height="32"/>
+        <image name="Rewards.png" width="32" height="32"/>
+        <image name="Search.png" width="32" height="32"/>
+        <image name="bookmarkadd.png" width="24" height="24"/>
+        <image name="RQLogoRed.png" width="32" height="23"/>
+        <image name="RQLogoNavBar.png" width="320" height="64"/>
+        <image name="SegmentedBarRed.png" width="320" height="64"/>
+        <image name="SegmentedBarGray.png" width="320" height="64"/>
+        <image name="horseprof.png" width="376" height="162"/>
+        <image name="ic_bookmark_border_2x.png" width="48" height="48"/>
+        <image name="ic_bookmark_border_3x.png" width="72" height="72"/>
+        <image name="ic_bookmark_border.png" width="24" height="24"/>
+        <image name="ic_search_2x.png" width="48" height="48"/>
+        <image name="ic_search_3x.png" width="72" height="72"/>
+        <image name="ic_search.png" width="24" height="24"/>
+        <image name="ic_access_time_2x.png" width="48" height="48"/>
+        <image name="ic_access_time_3x.png" width="72" height="72"/>
+        <image name="ic_access_time.png" width="24" height="24"/>
+        <image name="ic_pin_drop_2x.png" width="48" height="48"/>
+        <image name="ic_pin_drop_3x.png" width="72" height="72"/>
+        <image name="ic_pin_drop.png" width="24" height="24"/>
+        <image name="Pause.png" width="40" height="40"/>
+        <image name="Play.png" width="40" height="40"/>
+        <image name="Stop.png" width="40" height="40"/>
+        <image name="ic_bookmark_full.png" width="24" height="24"/>
+        <image name="ic_Time.png" width="16" height="16"/>
+        <image name="Weather/Cloudy.png" width="24" height="24"/>
+        <image name="Weather/Overcast.png" width="24" height="24"/>
+        <image name="Weather/Precipitation.png" width="24" height="24"/>
+        <image name="Weather/Rain.png" width="24" height="24"/>
+        <image name="Weather/Sunny.png" width="24" height="24"/>
+        <image name="Weather/Wind.png" width="24" height="24"/>
+        <image name="RacingCode/RacingCodeGHNormal.png" width="47" height="30"/>
+        <image name="RacingCode/RacingCodeGHSelected.png" width="47" height="30"/>
+        <image name="RacingCode/RacingCodeHANormal.png" width="47" height="30"/>
+        <image name="RacingCode/RacingCodeHASelected.png" width="47" height="29"/>
+        <image name="RacingCode/RacingCodeTbNormal.png" width="46" height="30"/>
+        <image name="RacingCode/RacingCodeTbSelected.png" width="46" height="30"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

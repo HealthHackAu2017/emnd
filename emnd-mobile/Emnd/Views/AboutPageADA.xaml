@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Emnd.AboutPageADA" 
+    xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+    Title="About"
+    >
+    <ContentPage.Content>
+        <StackLayout Spacing="0" VerticalOptions="StartAndExpand" Margin="0,10,0,10">
+            <Image Source="AppIcon"/>
+            <StackLayout VerticalOptions="Start">
+                <TableView Intent="Form" VerticalOptions="Start" BackgroundColor="White" HeightRequest="180">
+                    <TableRoot>
+                        <TableSection>
+                            <ViewCell Height="40">
+                                <StackLayout x:Name="LegalAndPrivacy" Orientation="Horizontal" Margin="0,0,0,0" HeightRequest="40" >
+                                    <iconize:IconImage HeightRequest="20" WidthRequest="20" Margin="8,0" Icon="md-lock" IconColor="Gray" />
+                                    <Label Text="Legal and Privacy" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" TextColor="Gray">
+                                        <Label.FontFamily>
+                                            <OnPlatform x:TypeArguments="x:String">
+                                                <OnPlatform.iOS>Gotham-Book</OnPlatform.iOS>
+                                                <OnPlatform.Android>Gotham-Book.otf#Gotham-Book</OnPlatform.Android>
+                                            </OnPlatform>
+                                        </Label.FontFamily>
+                                        <Label.Margin>
+                                            <OnPlatform x:TypeArguments="Thickness" iOS="0,0,0,0" Android="0,8,0,0" />
+                                        </Label.Margin>
+                                    </Label>
+                                    <iconize:IconButton Margin="0,0,2,0" FontSize="30" Text="md-navigate-next" TextColor="Gray" WidthRequest="50"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <ViewCell Height="40">
+                                <StackLayout x:Name="EmailSupport" Orientation="Horizontal" Margin="0,0,0,0" HeightRequest="40" >
+                                    <iconize:IconImage HeightRequest="20" WidthRequest="20" Margin="8,0" Icon="md-contact-mail" IconColor="Red" />
+                                    <Label Text="Send a Support Request" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" TextColor="Red">
+                                        <Label.Margin>
+                                            <OnPlatform x:TypeArguments="Thickness" iOS="0,0,0,0" Android="0,8,0,0" />
+                                        </Label.Margin>
+                                    </Label>
+                                    <iconize:IconButton Margin="0,0,2,0" FontSize="30" Text="md-navigate-next" TextColor="Gray" WidthRequest="50"/>
+                                </StackLayout>
+                                </ViewCell>
+                            <TextCell x:Name="VersionTextCell" Text="App Version" TextColor="Gray" Detail="Version 1.0" DetailColor="Silver" />
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+                <Label x:Name="WwwLabel" Text="www.emnd.com.au" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Blue"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
