@@ -16,6 +16,10 @@ namespace Emnd.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISlider ComparisonSlider { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIView MainView { get; set; }
 
         [Outlet]
@@ -40,10 +44,19 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UISlider SleepSlider { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField WeightEntry { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (ComparisonSlider != null) {
+                ComparisonSlider.Dispose ();
+                ComparisonSlider = null;
+            }
+
             if (MainView != null) {
                 MainView.Dispose ();
                 MainView = null;
@@ -72,6 +85,11 @@ namespace Emnd.iOS
             if (SendButton != null) {
                 SendButton.Dispose ();
                 SendButton = null;
+            }
+
+            if (SleepSlider != null) {
+                SleepSlider.Dispose ();
+                SleepSlider = null;
             }
 
             if (WeightEntry != null) {
