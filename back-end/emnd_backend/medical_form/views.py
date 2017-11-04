@@ -1,6 +1,3 @@
 from django.shortcuts import render
-from django.conf.urls import url
 
-urlpatterns = [
-    
-]
+# Create your views here.
