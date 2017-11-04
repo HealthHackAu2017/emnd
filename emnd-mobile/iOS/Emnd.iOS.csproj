@@ -369,6 +369,10 @@
     <Compile Include="Views\MenuView.designer.cs">
       <DependentUpon>MenuView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SurveyEntryView.cs" />
+    <Compile Include="Views\SurveyEntryView.designer.cs">
+      <DependentUpon>SurveyEntryView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -385,9 +389,9 @@
     <InterfaceDefinition Include="Views\SurveyView.storyboard" />
     <InterfaceDefinition Include="Views\ProfileView.storyboard" />
     <InterfaceDefinition Include="Views\BodymapView.storyboard" />
-    <InterfaceDefinition Include="Views\Storyboard.storyboard" />
     <InterfaceDefinition Include="Views\BodyView.storyboard" />
     <InterfaceDefinition Include="Views\MenuView.storyboard" />
+    <InterfaceDefinition Include="Views\SurveyEntryView.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

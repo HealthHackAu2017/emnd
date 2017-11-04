@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="229">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="228">
+            <objects>
+                <viewController id="229" sceneMemberID="viewController" customClass="SurveyEntryView" storyboardIdentifier="SurveyEntryView">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="226"/>
+                        <viewControllerLayoutGuide type="bottom" id="227"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="230">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0" maxValue="100" id="463" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" maximumValueImage="home.png" minimumValueImage="Account.png" continuous="NO">
+                                <rect key="frame" x="115" y="254" width="355" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="464" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Participant Name">
+                                <rect key="frame" x="154" y="77" width="173" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="465" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Participant ID">
+                                <rect key="frame" x="154" y="126" width="173" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="466" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Weight (kg)">
+                                <rect key="frame" x="154" y="174" width="173" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="MainView" destination="230" id="name-outlet-230"/>
+                        <outlet property="ParticipantNameEntry" destination="464" id="name-outlet-464"/>
+                        <outlet property="WeightEntry" destination="466" id="name-outlet-466"/>
+                        <outlet property="ParticipantIdEntry" destination="465" id="name-outlet-465"/>
+                        <outlet property="MySlider" destination="463" id="name-outlet-463"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="231" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home.png" width="32" height="32"/>
+        <image name="Account.png" width="32" height="32"/>
+        <image name="Appointments.png" width="235" height="233"/>
+        <image name="Diary.png" width="235" height="233"/>
+        <image name="Mnd.png" width="235" height="233"/>
+        <image name="Profile.png" width="235" height="233"/>
+        <image name="Research.png" width="235" height="233"/>
+        <image name="Team.png" width="235" height="233"/>
+        <image name="BodyModel.png" width="238" height="731"/>
+    </resources>
+</document>

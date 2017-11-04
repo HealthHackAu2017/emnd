@@ -93,6 +93,8 @@
     <Compile Include="ViewModels\MenuViewModel.cs" />
     <Compile Include="ViewModels\BodymapViewModel.cs" />
     <Compile Include="ViewModels\BodyViewModel.cs" />
+    <Compile Include="Models\SurveyQuestionModel.cs" />
+    <Compile Include="ViewModels\SurveyEntryViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.UserDialogs">

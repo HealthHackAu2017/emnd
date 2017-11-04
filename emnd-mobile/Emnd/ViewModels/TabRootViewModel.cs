@@ -30,6 +30,7 @@ namespace Emnd
             tasks.Add(_navigationService.Navigate<BodyViewModel>());
             tasks.Add(_navigationService.Navigate<SurveyViewModel>());
             tasks.Add(_navigationService.Navigate<ProfileViewModel>());
+            tasks.Add(_navigationService.Navigate<SurveyEntryViewModel>());
             await Task.WhenAll(tasks);
         }
 
