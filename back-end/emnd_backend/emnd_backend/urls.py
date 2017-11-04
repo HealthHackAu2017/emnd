@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf.urls import url, include
 from rest_framework_swagger.views import get_swagger_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^', include('medical_form.urls')),
     url(r'^docs/', get_swagger_view(title='EMND API'))
 ]
