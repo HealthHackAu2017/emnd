@@ -22,8 +22,7 @@ namespace Emnd.iOS
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-            Log.Information("Profile View appear");
-            ShowSurveyListPage();
+            Log.Information("Survey View appearred");
         }
 
 

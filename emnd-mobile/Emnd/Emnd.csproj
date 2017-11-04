@@ -40,6 +40,10 @@
      <SubType>Designer</SubType>
      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
    </EmbeddedResource>
+   <EmbeddedResource Include="Views\DashboardPage.xaml">
+     <SubType>Designer</SubType>
+     <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+   </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="ViewModels\LoginViewModel.cs" />
@@ -83,6 +87,10 @@
     <Compile Include="Views\SurveyListPage.xaml.cs">
       <DependentUpon>SurveyListPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DashboardPage.xaml.cs">
+      <DependentUpon>DashboardPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\DashboardViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.UserDialogs">

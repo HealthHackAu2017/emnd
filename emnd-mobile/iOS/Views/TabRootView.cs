@@ -39,7 +39,6 @@ namespace Emnd.iOS
             base.ViewDidLoad();
             if (TabRootTabBar != null)
             {
-                //TabRootTabBar.UnselectedItemTintColor = UIColor.White; iOS 10+ only
                 //TabRootTabBar.ItemSelected += (sender, e) =>
                 //{
                 //    Log.Information("Selected tab = " + TabRootTabBar.SelectedItem.Title);

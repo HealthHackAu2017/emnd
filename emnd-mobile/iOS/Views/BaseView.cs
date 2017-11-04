@@ -14,16 +14,8 @@ using MvvmCross.Core.ViewModels;
 
 namespace Emnd.iOS
 {
-    /// <summary>
-    /// A base view controller 
-    /// </summary>
     public class BaseView<TViewModel> : MvxViewController where TViewModel : class
     {
-        //public new TViewModel ViewModel
-        //{
-        //    get;
-        //    set;
-        //}
         public new TViewModel ViewModel
         {
             get { return (TViewModel)base.ViewModel; }
@@ -34,14 +26,14 @@ namespace Emnd.iOS
         {
         }
 
-        public BaseView(IntPtr handle): base(handle)
+        public BaseView(IntPtr handle) : base(handle)
         {
         }
 
         public override void ViewDidLoad()
         {
-        //    EdgesForExtendedLayout = UIRectEdge.None;
-        //    View.BackgroundColor = UIColor.White;
+            //    EdgesForExtendedLayout = UIRectEdge.None;
+            //    View.BackgroundColor = UIColor.White;
 
             base.ViewDidLoad();
 
@@ -65,16 +57,9 @@ namespace Emnd.iOS
             Log.Information($"Setting navigation title {title}");
             try
             {
-                if (string.IsNullOrEmpty(title))
-                {
-                    UIImage navbarImage = UIImage.FromBundle("RQLogoNavBar");
-                    NavigationController.NavigationBar.SetBackgroundImage(navbarImage.CreateResizableImage(UIEdgeInsets.Zero, UIImageResizingMode.Stretch), UIBarMetrics.Default);
-                    //NavigationController.NavigationBar.SetBackgroundImage(navbarImage, UIBarMetrics.Default);
-                }
-                else
+                if (!string.IsNullOrEmpty(title))
                 {
                     NavigationController.NavigationBar.SetBackgroundImage(null, UIBarMetrics.Default);
-                    //NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes { ForegroundColor = UIColor.Black, Font = UIFont.FromName("Avenir-Book", 14) };
                     this.NavigationItem.Title = usetitlecase ? System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(title) : title;
                 }
             }
@@ -82,6 +67,6 @@ namespace Emnd.iOS
             {
                 Log.Error("SetNavigationBarTitle " + ex.StackTrace);
             }
-        } 
+        }
     }
 }
