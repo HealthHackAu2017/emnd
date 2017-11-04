@@ -437,6 +437,21 @@
     <BundleResource Include="Resources\BodyModel.png" />
     <BundleResource Include="Resources\BodyModel%402x.png" />
     <BundleResource Include="Resources\BodyModel%403x.png" />
+    <BundleResource Include="Resources\Splashmnd.png" />
+    <BundleResource Include="Resources\Splashmnd%402x.png" />
+    <BundleResource Include="Resources\Splashmnd%403x.png" />
+    <BundleResource Include="Resources\BodymapComplete.png" />
+    <BundleResource Include="Resources\BodymapHeadComplete.png" />
+    <BundleResource Include="Resources\BodymapHeadnNeckComplete.png" />
+    <BundleResource Include="Resources\BodymapHeadnNecknLungsComplete.png" />
+    <BundleResource Include="Resources\BodymapHNlLSALComplete.png" />
+    <BundleResource Include="Resources\BodymapHeadNeckLungsLstomachArmsComplete.png" />
+    <BundleResource Include="Resources\BodymapSilhouetteComplete.png" />
+    <BundleResource Include="Resources\Neck.png" />
+    <BundleResource Include="Resources\Lungs.png" />
+    <BundleResource Include="Resources\SliderButton.png" />
+    <BundleResource Include="Resources\SliderButton%402x.png" />
+    <BundleResource Include="Resources\SliderButton%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Remove="iTunesArtwork%402x" />
