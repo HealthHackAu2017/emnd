@@ -21,7 +21,7 @@ from rest_framework_jwt.views import obtain_jwt_token, verify_jwt_token
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^docs/', get_swagger_view(title='EMND API')),
+    url(r'^docs/?$', get_swagger_view(title='EMND API')),
     url(r'^auth-token/', obtain_jwt_token),
     url(r'^auth-token-verify/', verify_jwt_token),
     url(r'^', include('medical_form.urls')),
