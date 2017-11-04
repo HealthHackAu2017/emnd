@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf.urls import url, include
 from rest_framework_swagger.views import get_swagger_view
+from rest_framework_jwt.views import obtain_jwt_token, verify_jwt_token
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^docs/', get_swagger_view(title='EMND API'))
+    url(r'^docs/?$', get_swagger_view(title='EMND API')),
+    url(r'^auth-token/', obtain_jwt_token),
+    url(r'^auth-token-verify/', verify_jwt_token),
+    url(r'^', include('medical_form.urls')),
 ]
