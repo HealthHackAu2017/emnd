@@ -24,6 +24,10 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView QuestionTable { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel SectionInfoLabel { get; set; }
 
         [Outlet]
@@ -44,6 +48,11 @@ namespace Emnd.iOS
             if (MainView != null) {
                 MainView.Dispose ();
                 MainView = null;
+            }
+
+            if (QuestionTable != null) {
+                QuestionTable.Dispose ();
+                QuestionTable = null;
             }
 
             if (SectionInfoLabel != null) {

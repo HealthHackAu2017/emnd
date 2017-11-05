@@ -28,13 +28,13 @@ namespace Emnd
             public bool SectionSkipped { get; set; }
             public bool SectionCompleted { get; set; }
 
-            public List<SurveyQuestion> SectionQuestions
-        {
-            get
-            {
-                return new List<SurveyQuestion>();
-            }
-        }
+        public List<SurveyQuestion> SectionQuestions { get; set; }
+        //{
+        //    get
+        //    {
+        //        return new List<SurveyQuestion>();
+        //    }
+        //}
             
         }
 
@@ -49,8 +49,8 @@ namespace Emnd
         public double Weight { get; set; }
         public SurveySection CurrentSection { get; set; }
 
-        private static List<SurveySection> _sections;
-        public static List<SurveySection> Sections()
+        public List<SurveySection> _sections;
+        public List<SurveySection> NewSections()
         {
             if (_sections == null)
             {
@@ -71,8 +71,8 @@ namespace Emnd
         }
 
 
-        private static List<SurveyQuestion> _questions;
-        public static List<SurveyQuestion> NewQuestions()
+        public List<SurveyQuestion> _questions;
+        public List<SurveyQuestion> NewQuestions()
         {
             if (_questions == null)
             {

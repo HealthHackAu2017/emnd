@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Collections.Generic;
+using System.Windows.Input;
 using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 using Serilog;
@@ -20,10 +21,11 @@ namespace Emnd
             Log.Information("SurveyEntryViewModel constructor");
 
             _navigationService = App.Instance._nav;
-            SectionName = "Start";                
+            SectionName = "Start";
             CloseViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Close(this));
-            SendAsCSVCommand = new MvxAsyncCommand(async () => {
-                App.Navigation.ToastMessage("Sending CSV", CurrentSurvey.ParticipantName);                                            
+            SendAsCSVCommand = new MvxAsyncCommand(async () =>
+            {
+                App.Navigation.ToastMessage("Sending CSV", CurrentSurvey.ParticipantName);
             });
 
             Init();
@@ -37,6 +39,7 @@ namespace Emnd
 
         public string SectionName { get; set; }
         public SurveySection CurrentSection { get; set; }
+        public List<SurveyQuestion> SectionQuestions { get; set; }
         public override void Prepare(string parameter)
         {
             Log.Information("Prepare view model with " + parameter);
@@ -62,13 +65,25 @@ namespace Emnd
             if (this.Survey == null)
             {
                 this.Survey = CurrentSurvey;
-                var q = Emnd.Survey.NewQuestions();
+                var q = this.Survey.NewQuestions();
                 this.D21 = q.Find(e => e.QuestionVariable.Equals("D21"));
                 RaiseAllPropertiesChanged();
             }
 
-            var sect = Emnd.Survey.Sections(); // this.Survey;
+            var sect = this.Survey.NewSections(); // this.Survey;
             this.CurrentSection = sect.Find(e => e.SectionName.Equals(this.SectionName));
+
+            var sq = new List<SurveyQuestion>();
+            //sq = this.Survey._questions;//.FindAll((obj) => obj.Section.Equals(this.SectionName));
+            sq = this.Survey._questions.FindAll((obj) => (obj.Section == this.SectionName));
+            this.SectionQuestions = sq;
+                
+
+            //// Questions in this section are
+            foreach (SurveyQuestion q in sq)
+            {
+                Log.Information($"Section question q= {q.Question} s={q.Section}");
+            }
         }
     }
 }
