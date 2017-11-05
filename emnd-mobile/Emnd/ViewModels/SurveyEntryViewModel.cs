@@ -12,6 +12,7 @@ namespace Emnd
         private readonly IMvxNavigationService _navigationService;
         public IMvxAsyncCommand CloseViewModelCommand { get; private set; }
         public IMvxAsyncCommand SendAsCSVCommand { get; private set; }
+        public IMvxAsyncCommand ShowBodyMapCommand { get; private set; }
         public static Survey CurrentSurvey { get; set; }
         public Survey Survey { get; set; }
         public SurveyQuestion D21 { get; set; }
@@ -26,6 +27,10 @@ namespace Emnd
             SendAsCSVCommand = new MvxAsyncCommand(async () =>
             {
                 App.Navigation.ToastMessage("Sending CSV", CurrentSurvey.ParticipantName);
+            });
+            ShowBodyMapCommand = new MvxAsyncCommand(async () =>
+            {
+                App.Instance._nav.Navigate<BodyViewModel>();
             });
 
             Init();

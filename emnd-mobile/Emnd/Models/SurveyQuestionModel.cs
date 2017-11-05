@@ -118,7 +118,15 @@ namespace Emnd
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Pain", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Right arm", MinText = "None", MaxText = "Severe" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Physical Fatigue", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Right arm", MinText = "None", MaxText = "Severe" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Wasting", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Right arm", MinText = "None", MaxText = "Severe" });
-            }
+
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Twitching", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Cramping", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Weakness", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Stiffness", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Pain", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Physical Fatigue", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Wasting", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+}
             return _questions;
         }
 

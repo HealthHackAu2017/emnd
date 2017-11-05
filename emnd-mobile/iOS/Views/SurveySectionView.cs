@@ -27,8 +27,11 @@ namespace Emnd.iOS
             base.ViewDidLoad();
             Log.Information("Survey Section load");
 
+            NavigationItem.Title = ViewModel.SectionName;
+
+
             var set = this.CreateBindingSet<SurveySectionView, SurveySectionViewModel>();
-            set.Bind(SectionNameLabel).To(vm => vm.SectionName);
+            //set.Bind(SectionNameLabel).To(vm => vm.SectionName);
             set.Bind(SectionInfoLabel).To(vm => vm.CurrentSection.SectionInfo);
             set.Apply();
 
