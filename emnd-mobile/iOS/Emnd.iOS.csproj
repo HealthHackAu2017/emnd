@@ -390,6 +390,7 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Remove="Views\Profile.storyboard" />
+    <InterfaceDefinition Remove="Views\Storyboard.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -399,6 +400,8 @@
     <InterfaceDefinition Include="Views\BodyView.storyboard" />
     <InterfaceDefinition Include="Views\MenuView.storyboard" />
     <InterfaceDefinition Include="Views\SurveyEntryView.storyboard" />
+    <InterfaceDefinition Include="Views\AboutMNDView.storyboard" />
+    <InterfaceDefinition Include="Views\ResultsGraph.storyboard" />
     <InterfaceDefinition Include="Views\SurveySectionView.storyboard" />
     <InterfaceDefinition Include="Views\SurveyQuestionViewCell.xib" />
   </ItemGroup>
@@ -461,6 +464,9 @@
     <BundleResource Include="Resources\SliderButton.png" />
     <BundleResource Include="Resources\SliderButton%402x.png" />
     <BundleResource Include="Resources\SliderButton%403x.png" />
+    <BundleResource Include="Resources\ResultsGraph.png" />
+    <BundleResource Include="Resources\ResultsGraph%402x.png" />
+    <BundleResource Include="Resources\ResultsGraph%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Remove="iTunesArtwork%402x" />
