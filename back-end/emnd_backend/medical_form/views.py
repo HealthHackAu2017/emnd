@@ -14,6 +14,18 @@ def submission_post(request):
         serializer = SubmissionSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
+            # print(serializer.data['user_id'])
+            # userId = serializer.data['user_id']
+            # submissions = Submission.objects.filter(user_id=userId).reverse()
+            # if len(submissions) > 1:
+            #     print(submissions[0].__dict__)
+            #     print(submissions[1].__dict__)
+            # else:
+
+            # print(serializer.data)
+            # print(serializer.data['d21a'])
+            # Data analytics code
+            # return output
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 

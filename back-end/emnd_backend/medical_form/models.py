@@ -12,26 +12,26 @@ class Submission(models.Model):
     submission_date = models.DateTimeField(auto_now_add=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     
-    #HEAD
-    D20a = models.IntegerField(default=0)
-    D20b = models.IntegerField(default=0)
-    D20c = models.IntegerField(default=0)
-    D20d = models.IntegerField(default=0)
+    # HEAD
+    d20a = models.IntegerField(default=0)
+    d20b = models.IntegerField(default=0)
+    d20c = models.IntegerField(default=0)
+    d20d = models.IntegerField(default=0)
 
-    #  THROAT 
-    D21a = models.IntegerField(default=0)    
-    D21b = models.IntegerField(default=0)
-    D21c = models.IntegerField(default=0)
-    D21d = models.IntegerField(default=0)
-    D21e = models.IntegerField(default=0)
-    D21f = models.IntegerField(default=0)
+    # THROAT 
+    d21a = models.IntegerField(default=0)    
+    d21b = models.IntegerField(default=0)
+    d21c = models.IntegerField(default=0)
+    d21d = models.IntegerField(default=0)
+    d21e = models.IntegerField(default=0)
+    d21f = models.IntegerField(default=0)
 
     # LUNGS
-    D22a = models.IntegerField(default=0)
-    D22b = models.IntegerField(default=0)
-    D22c = models.IntegerField(default=0)
+    d22a = models.IntegerField(default=0)
+    d22b = models.IntegerField(default=0)
+    d22c = models.IntegerField(default=0)
 
 
     
-#    class Meta:
-#       ordering = ('created',)
+    class Meta:
+        ordering = ('submission_date',)

@@ -7,10 +7,10 @@ class SubmissionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Submission
         fields = ('id', 'submission_date','user_id',
-            'D20a', 'D20b', 'D20c', 'D20d', #HEAD
-            'D21a', 'D21b', 'D21c', 'D21d', 'D21e', 'D21f' #THROAT
-            'D22a', 'D22b', 'D22c' #LUNGS
-         )
+            'd20a', 'd20b', 'd20c', 'd20d', #HEAD
+            'd21a', 'd21b', 'd21c', 'd21d', 'd21e', 'd21f', #THROAT
+            'd22a', 'd22b', 'd22c' #LUNGS
+        )
 
     #linenos = serializers.BooleanField(required=False)
     #language = serializers.ChoiceField(choices=LANGUAGE_CHOICES, default='python')
@@ -30,23 +30,23 @@ class SubmissionSerializer(serializers.ModelSerializer):
         
 
         # D20 HEAD
-        instance.D20a = validated_data.get('D20a', instance.D20a)
-        instance.D20b = validated_data.get('D20b', instance.D20b)
-        instance.D20c = validated_data.get('D20c', instance.D20c)
-        instance.D20d = validated_data.get('D20d', instance.D20d)
-       
+        instance.d20a = validated_data.get('d20a', instance.D20a)
+        instance.d20b = validated_data.get('d20b', instance.D20b)
+        instance.d20c = validated_data.get('d20c', instance.D20c)
+        instance.d20d = validated_data.get('d20d', instance.d20d)
+
         # D21 THROAT
-        instance.D21a = validated_data.get('D21a', instance.D21a)
-        instance.D21b = validated_data.get('D21b', instance.D21b)
-        instance.D21c = validated_data.get('D21c', instance.D21c)
-        instance.D21d = validated_data.get('D21d', instance.D21d)
-        instance.D21e = validated_data.get('D21e', instance.D21e)
-        instance.D21e = validated_data.get('D21f', instance.D21f)
+        instance.d21a = validated_data.get('d21a', instance.d21a)
+        instance.d21b = validated_data.get('d21b', instance.d21b)
+        instance.d21c = validated_data.get('d21c', instance.d21c)
+        instance.d21d = validated_data.get('d21d', instance.d21d)
+        instance.d21e = validated_data.get('d21e', instance.d21e)
+        instance.d21f = validated_data.get('d21f', instance.d21f)
 
         # D22 LUNGS
-        instance.D22a = validated_data.get('D22a', instance.D22a)
-        instance.D22b = validated_data.get('D22b', instance.D22b)
-        instance.D22c = validated_data.get('D22c', instance.D22c)
+        instance.d22a = validated_data.get('d22a', instance.d22a)
+        instance.d22b = validated_data.get('d22b', instance.d22b)
+        instance.d22c = validated_data.get('d22c', instance.d22c)
 
 
         # instance.q1 = validated_data.get('q1', instance.q1)
