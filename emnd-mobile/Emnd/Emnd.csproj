@@ -98,6 +98,8 @@
     <Compile Include="ViewModels\SurveySectionViewModel.cs" />
     <Compile Include="ViewModels\AboutMNDViewModel.cs" />
     <Compile Include="ViewModels\ResultsGraphViewModel.cs" />
+    <Compile Include="Models\SubmissionDTO.cs" />
+    <Compile Include="Models\SubmissionResultDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.UserDialogs">

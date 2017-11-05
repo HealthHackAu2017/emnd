@@ -7,6 +7,7 @@ using MvvmCross.iOS.Views.Presenters.Attributes;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using Serilog;
+using System.Threading.Tasks;
 
 namespace Emnd.iOS
 {
@@ -24,7 +25,15 @@ namespace Emnd.iOS
             base.ViewDidLoad();
             Log.Information("MenuView load");
 
-             NavigationItem.Title = ViewModel.SectionName;
+            NavigationItem.Title = ViewModel.SectionName;
+            var NavButton = new UIBarButtonItem();
+            NavButton.Title = "SAVE";
+            NavButton.Clicked += async (object sender, EventArgs e) =>
+            {
+                await SaveSurveyAsync();
+            };
+            NavigationItem.RightBarButtonItem = NavButton;
+
 
             HeadButton.TouchUpInside += (sender, e) =>
             {
@@ -63,6 +72,80 @@ namespace Emnd.iOS
                 App.Instance._nav.Navigate<SurveySectionViewModel, string>("Torso");
             };
         }
+
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+            Log.Information("Body View appear");
+            //if (ViewModel.
+        }
+
+
+        public async Task<bool> SaveSurveyAsync()
+        {
+            bool success = false;
+            string ErrorMessage = "An unknown error occurred";
+            //UserDialogs.Instance.ShowLoading("Authenticating");
+            try
+            {
+                var SubmissionRequest = new SubmissionDTO
+                {
+                    UserId = 1
+                };
+                // Map the user answers
+                foreach (var q in ViewModel.Survey._questions)
+                {
+                    var property = SubmissionRequest.GetType().GetProperty(q.QuestionVariable);
+                    if (property != null)
+                    {
+                        property.SetValue(SubmissionRequest, q.AnswerValue, null);
+                    }
+                    else
+                    {
+                        Log.Information("Skipping " + q.QuestionVariable);
+                    }
+                }
+                var json = SubmissionRequest.AsJsonString();
+                Log.Information("Saving JSON to server " + json.AsJsonString());
+                //return success;
+
+                var network = new NetworkService();
+
+                var submissionResult = await network.PostData<SubmissionResultDTO>("/submissions/submit/", json, "Saving...");
+                if (submissionResult != null && submissionResult.Count > 0)
+                {
+                    //set session token
+                    //SubmissionResultDTO result = submissionResult[0];
+                    //Log.Information("Received result " + result);
+                    success = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrorMessage = ex.Message;
+                Log.Error("AsyncTryLoginCommand " + ex.StackTrace);
+            }
+            finally
+            {
+                //UserDialogs.Instance.HideLoading();
+                Log.Information("Success");
+                if (success)
+                {
+                    ShowResultPage();
+                }
+                if (!success)
+                {
+                    App.Navigation.ShowError(ErrorMessage);
+                }
+            }
+            return success;
+        }
+
+        public void ShowResultPage()
+        {
+            this.TabBarController.SelectedIndex = 2;
+        }
+
 
     }
 }

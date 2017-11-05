@@ -47,11 +47,11 @@
                                     <color key="titleColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3223" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Neck.png">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3223" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Neck.png" hidden="YES">
                                 <rect key="frame" x="265" y="208" width="238" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3463" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Lungs.png">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3463" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Lungs.png" hidden="YES">
                                 <rect key="frame" x="265" y="208" width="238" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -119,6 +119,7 @@
                         <outlet property="LeftLegButton" destination="3745" id="name-outlet-3745"/>
                         <outlet property="RightLegButton" destination="3746" id="name-outlet-3746"/>
                         <outlet property="TorsoButton" destination="3747" id="name-outlet-3747"/>
+                        <outlet property="LungComplete" destination="3463" id="name-outlet-3463"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="459" userLabel="First Responder" sceneMemberID="firstResponder"/>

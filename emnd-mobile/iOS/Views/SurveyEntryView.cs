@@ -10,7 +10,6 @@ using Serilog;
 
 namespace Emnd.iOS
 {
-    // Switch to     [MvxChildPresentation]
     [MvxFromStoryboard("SurveyEntryView")]
     [MvxTabPresentation(WrapInNavigationController = true, TabIconName = "home", TabName = "Start")]
     public partial class SurveyEntryView : MvxViewController<SurveyEntryViewModel>
@@ -21,8 +20,6 @@ namespace Emnd.iOS
 
         public override void ViewDidLoad()
         {
-            // TODO: base view to get rid of keyboard
-
             base.ViewDidLoad();
             Log.Information("Survey Start load");
 
@@ -45,11 +42,6 @@ namespace Emnd.iOS
             set.Bind(WeightEntry).To(vm => vm.Survey.Weight);
             //set.Bind(SendButton).To(vm => vm.ShowBodyMapCommand);
             set.Apply();
-            //SendButton.TouchUpInside += (sender, e) => {ViewModel.ShowBodyMapCommand.Execute();};
-
-            //this.FeedbackTextField.ShouldReturn += SearchBar_ShouldReturn;
-            //this.FeedbackButton.TouchUpInside += FeedbackButton_TouchUpInside;
-            //RewardTable.KeyboardDismissMode = UIScrollViewKeyboardDismissMode.OnDrag;
         }
 
         public override void ViewDidAppear(bool animated)

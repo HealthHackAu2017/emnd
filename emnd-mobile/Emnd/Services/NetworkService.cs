@@ -11,6 +11,7 @@ using Xamarin.Forms;
 using Plugin.DeviceInfo;
 using Newtonsoft.Json;
 using Acr.UserDialogs;
+using System.Net.Http.Headers;
 
 namespace Emnd
 {
@@ -68,10 +69,10 @@ namespace Emnd
         const string AuthKey = "token";
         public string AuthValue { get; set; }
 
-        const string AppPlatformKey = "x-rq-app-platform";
+        const string AppPlatformKey = "x-app-platform";
         private string AppPlatformValue = Device.RuntimePlatform;
 
-		const string AppVersionKey = "x-rq-app-version";
+		const string AppVersionKey = "x-app-version";
         private string AppVersionValue = DisplayInfo.VersionAndBuildNumber;
 
         //Endpoints
@@ -98,7 +99,7 @@ namespace Emnd
 
             Task.Run(() => IsServerReachable().ContinueWith(resp =>
             {
-                Log.Information($"Rubin platform is reachable = {resp.Result}");
+                Log.Information($"Platform is reachable = {resp.Result}");
 
                 if (!resp.Result)
                 {
@@ -187,23 +188,12 @@ namespace Emnd
                     : string.Format("Request: {0}, Uri {1}", request.Method, request.RequestUri)
                 );
 
-                //request.Headers.Add("Content-Type", "application / json");
-                //request.Headers.Add(AppPlatformKey, AppPlatformValue);
-                //request.Headers.Add(AppVersionKey, AppVersionValue);
+                var authData = string.Format("{0}:{1}", "harshp", "pass1234");
+                var authHeaderValue = Convert.ToBase64String(Encoding.UTF8.GetBytes(authData));
 
-                if (UserAuthenticationToken.Equals(endpoint))
-                {
-                    Log.Warning($"{endpoint} logging in - accesstoken does not need to be set");
-                    //UserDialogs.Instance.ShowLoading("Authenticating");
-                }
-                else
-                {
-                    if (AppSettings.HasToken)
-                    {
-                        request.Headers.Add("Authorization", "APIToken");
-                    }
-                }
-
+                Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authHeaderValue);
+                //request.Headers.Add("Authorization", "Basic aGFyc2hwOnBhc3MxMjM0");
+ 
                 var response = await Client.SendAsync(request);
                 Log.Information(string.Format("Response: {0} {1}, Uri: {2}, Length(Byte): {3}\nContent: {4}",
                     (int) response.StatusCode, response.ReasonPhrase, request.RequestUri,
