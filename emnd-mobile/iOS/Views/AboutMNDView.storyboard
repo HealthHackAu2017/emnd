@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="232">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="231">
+            <objects>
+                <viewController id="232" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="229"/>
+                        <viewControllerLayoutGuide type="bottom" id="230"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="233">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="537" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="60" y="128" width="647" height="896"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="668" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                        <rect key="frame" x="36" y="0.0" width="576" height="896"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">About SHOWmndME
+Thank you for downloading the SHOWmndME app. The SHOWmndME app aims to collect information about you, your MND diagnosis, and the symptoms you are experiencing. The app will ask you to provide information every two weeks through the SHOWmndME diary. Completing the diary regularly will assist you and your health care professionals in accurately recording your symptoms, your diet, and your overall wellness since your MND diagnosis.
+It is now well documented that accurate reporting of your symptoms and changes in your symptoms to your health care team will assist them in understanding your disease progression. It will also assist them in making decisions that might influence your health care and treatment. Knowledge that MND progression is different for every patient makes it vital that individual-level information is used to inform personalised care plans and treatments. The SHOWmndME app aims to assist in personalised care.
+The SHOWmndME app has a research component. Through the SHOWmndME app, researchers can collect data from MND patients to better understand the progression of MND. Through research, SHOWmndME will assist patients in tracking their symptoms by creating a personal database that will flag changes in the patient’s everyday life. 
+The research team consists of a group of clinicians, nurses, and researchers dedicated to studying MND. The research team needs your help to progress this MND research. 
+Learn more about the SHOWmndME research team? [CLICK HERE]
+Learn more about MND [CLICK HERE]
+
+This SHOWmndME app and the research component that is linked to the app have been reviewed for the University of Queensland and approved in Australia:
+Bellberry Limited
+Phone: 08 8361 3222
+Email: bellberry@bellberry.com.au
+Address: 129 Glen Osmond Road Eastwood, South Australia 5063
+Website: www.bellberry.com.au
+Before you start using the SHOWmndME app we would like to remind you that you have already provided written consent to download the app and provide information about yourself and your MND diagnosis. If you would like to review the consent form that you signed please [CLICK HERE]
+Completing your SHOWmndME diary every fortnight should only take about 5-10 minutes of your time. We do recommend that you complete the SHOWmndME diary at about the same time, preferably before or soon after eating breakfast and ideally before 10am in the morning. This will ensure consistency of the data collected, as you will be able to report more accurately if you answer the same questions at the same time for each entry. 
+Information on how to use the SHOWmndME app [CLICK HERE]
+SHOWmndME FAQs [CLICK HERE]
+SHOWmndME DISCLAIMER [CLICK HERE]
+</string>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </view>
+                        </subviews>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="234" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home.png" width="32" height="32"/>
+        <image name="Account.png" width="32" height="32"/>
+        <image name="Appointments.png" width="235" height="233"/>
+        <image name="Diary.png" width="235" height="233"/>
+        <image name="Mnd.png" width="235" height="233"/>
+        <image name="Profile.png" width="235" height="233"/>
+        <image name="Research.png" width="235" height="233"/>
+        <image name="Team.png" width="235" height="233"/>
+        <image name="BodyModel.png" width="238" height="731"/>
+        <image name="Splashmnd.png" width="117" height="136"/>
+        <image name="BodymapComplete.png" width="232" height="725"/>
+        <image name="BodymapHeadComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadnNeckComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadnNecknLungsComplete.png" width="238" height="731"/>
+        <image name="BodymapHNlLSALComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadNeckLungsLstomachArmsComplete.png" width="238" height="731"/>
+        <image name="BodymapSilhouetteComplete.png" width="238" height="731"/>
+        <image name="Neck.png" width="238" height="731"/>
+        <image name="Lungs.png" width="238" height="731"/>
+        <image name="SliderButton.png" width="54" height="54"/>
+        <image name="ResultsGraph.png" width="571" height="324"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
