@@ -16,6 +16,7 @@ namespace Emnd.iOS
     //[MvxTabPresentation(WrapInNavigationController = true, TabIconName = "home", TabName = "BodyMap")]
     public partial class BodyView : MvxViewController<BodyViewModel>
     {
+        private int FirstLoad = 0;
         public BodyView(IntPtr handle) : base(handle)
         {
         }
@@ -77,7 +78,18 @@ namespace Emnd.iOS
         {
             base.ViewDidAppear(animated);
             Log.Information("Body View appear");
-            //if (ViewModel.
+
+            if (FirstLoad++ > 2)
+            {
+                if (NeckComplete.Hidden)
+                {
+                    NeckComplete.Hidden = false;
+                }
+                else if (LungComplete.Hidden)
+                {
+                    LungComplete.Hidden = false;
+                }
+            }
         }
 
 
