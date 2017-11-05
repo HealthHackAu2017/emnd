@@ -35,9 +35,7 @@ namespace Emnd.iOS
             set.Bind(ParticipantNameEntry).To(vm => vm.Survey.ParticipantName);
             set.Bind(ParticipantIdEntry).To(vm => vm.Survey.ParticipantID);
             set.Bind(WeightEntry).To(vm => vm.Survey.Weight);
-            //set.Bind(MyLabel).To(vm => vm.D21.Question);
-            //set.Bind(MySlider).To(vm => vm.D21.DefaultValue);
-            set.Bind(SendButton).To(vm => vm.SendAsCSVCommand);
+            set.Bind(SendButton).To(vm => vm.ShowBodyMapCommand);
             set.Apply();
 
             //this.FeedbackTextField.ShouldReturn += SearchBar_ShouldReturn;
@@ -50,15 +48,5 @@ namespace Emnd.iOS
             base.ViewDidAppear(animated);
             Log.Information("Survey Start appeared");
         }
-
-
-        Xamarin.Forms.Page SurveyListPage;
-        private void ShowSurveyListPage()
-        {
-            SurveyListPage = new SurveyListPage();
-            var pageViewController = SurveyListPage.CreateViewController();
-            this.NavigationController.PushViewController(pageViewController, false);
-        }
-
     }
 }

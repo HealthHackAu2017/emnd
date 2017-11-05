@@ -70,7 +70,6 @@
                         <outlet property="MainView" destination="233" id="name-outlet-233"/>
                         <outlet property="DoneButton" destination="253" id="name-outlet-253"/>
                         <outlet property="SkipButton" destination="252" id="name-outlet-252"/>
-                        <outlet property="SectionNameLabel" destination="250" id="name-outlet-250"/>
                         <outlet property="SectionInfoLabel" destination="251" id="name-outlet-251"/>
                         <outlet property="QuestionTable" destination="517" id="name-outlet-517"/>
                     </connections>

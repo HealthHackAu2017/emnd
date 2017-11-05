@@ -11,7 +11,8 @@ using Serilog;
 namespace Emnd.iOS
 {
     [MvxFromStoryboard("BodyView")]
-    [MvxTabPresentation(WrapInNavigationController = true, TabIconName = "home", TabName = "BodyMap")]
+    [MvxChildPresentation]
+    //[MvxTabPresentation(WrapInNavigationController = true, TabIconName = "home", TabName = "BodyMap")]
     public partial class BodyView : MvxViewController<BodyViewModel>
     {
         public BodyView(IntPtr handle) : base(handle)
@@ -29,24 +30,43 @@ namespace Emnd.iOS
             //    ShowStartTab();
             //};
             //NavigationItem.RightBarButtonItem = NavButton;
+            NavigationItem.Title = ViewModel.SectionName;
 
-            //HeadButton.TouchUpInside += (sender, e) =>
-            //{
-            //    App.Instance._nav.Navigate<SurveySectionViewModel, string>("Mental Health");
-            //};
-            //SalivaButton.TouchUpInside += (sender, e) =>
-            //{
-            //    App.Instance._nav.Navigate<SurveySectionViewModel, string>("Saliva");
-            //};
-            Lung1Button.TouchUpInside += (sender, e) =>
+            HeadButton.TouchUpInside += (sender, e) =>
             {
-                //App.Navigation.ToastMessage("Click", "Lung");
+                App.Instance._nav.Navigate<SurveySectionViewModel, string>("Mental Health");
+            };
+            ThroatButton.TouchUpInside += (sender, e) =>
+            {
+                App.Instance._nav.Navigate<SurveySectionViewModel, string>("Saliva");
+            };
+            LungButton.TouchUpInside += (sender, e) =>
+            {
                 App.Instance._nav.Navigate<SurveySectionViewModel, string>("Breathing");
             };
-            Throat1Button.TouchUpInside += (sender, e) =>
+            DigestionButton.TouchUpInside += (sender, e) =>
             {
-                //App.Navigation.ToastMessage("Click", "Throat");
-                App.Instance._nav.Navigate<SurveySectionViewModel, string>("Mental Health");
+                App.Instance._nav.Navigate<SurveySectionViewModel, string>("Digestion");
+            };
+            LeftArmButton.TouchUpInside += (sender, e) =>
+            {
+                App.Instance._nav.Navigate<SurveySectionViewModel, string>("Right arm");
+            };
+            RightArmButton.TouchUpInside += (sender, e) =>
+            {
+                App.Instance._nav.Navigate<SurveySectionViewModel, string>("Left arm");
+            };
+            LeftLegButton.TouchUpInside += (sender, e) =>
+            {
+                App.Instance._nav.Navigate<SurveySectionViewModel, string>("Right leg");
+            };
+            RightLegButton.TouchUpInside += (sender, e) =>
+            {
+                App.Instance._nav.Navigate<SurveySectionViewModel, string>("Left leg");
+            };
+            TorsoButton.TouchUpInside += (sender, e) =>
+            {
+                App.Instance._nav.Navigate<SurveySectionViewModel, string>("Torso");
             };
         }
 

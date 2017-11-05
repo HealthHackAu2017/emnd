@@ -32,10 +32,6 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel SectionNameLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton SkipButton { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -58,11 +54,6 @@ namespace Emnd.iOS
             if (SectionInfoLabel != null) {
                 SectionInfoLabel.Dispose ();
                 SectionInfoLabel = null;
-            }
-
-            if (SectionNameLabel != null) {
-                SectionNameLabel.Dispose ();
-                SectionNameLabel = null;
             }
 
             if (SkipButton != null) {
