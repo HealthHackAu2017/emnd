@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="229">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Survey Entry View-->
+        <scene sceneID="228">
+            <objects>
+                <viewController storyboardIdentifier="SurveyEntryView" id="229" customClass="SurveyEntryView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="226"/>
+                        <viewControllerLayoutGuide type="bottom" id="227"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="230">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="321-KC-VSc" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="kdX-i4-NTD" fixedFrame="YES">
+                                        <rect key="frame" x="52" y="173" width="663" height="735"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="mNe-2o-cIT">
+                                                <rect key="frame" x="0.0" y="0.0" width="663" height="167"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Participant Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="464">
+                                                        <rect key="frame" x="0.0" y="0.0" width="663" height="39"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Participant ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="465">
+                                                        <rect key="frame" x="0.0" y="64" width="663" height="39"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight (kg)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="466">
+                                                        <rect key="frame" x="0.0" y="128" width="663" height="39"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="663" id="Rpj-9i-G6F"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="3zO-nG-gJi">
+                                                <rect key="frame" x="0.0" y="221" width="412" height="104"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today I feel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="707">
+                                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="33"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pER-r8-Nfs">
+                                                        <rect key="frame" x="0.0" y="73" width="412" height="31"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK6-87-Z8Z">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="100" continuous="NO" minimumValueImage="Account.png" maximumValueImage="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="463">
+                                                                <rect key="frame" x="48" y="0.0" width="304" height="32"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="300" id="O1d-zH-OOU"/>
+                                                                </constraints>
+                                                                <color key="minimumTrackTintColor" red="0.24498385190963745" green="0.33558699488639832" blue="0.98018163442611694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </slider>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS8-TA-oIk">
+                                                                <rect key="frame" x="370" y="0.0" width="42" height="31"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="aqR-pk-TXZ">
+                                                <rect key="frame" x="0.0" y="379" width="494" height="104"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compared to this time two weeks ago I feel ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgl-ip-eVV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="494" height="33"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3HN-XS-EDz">
+                                                        <rect key="frame" x="0.0" y="73" width="412" height="31"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcP-4A-B39">
+                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="100" continuous="NO" minimumValueImage="Account.png" maximumValueImage="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="tMQ-xU-3kZ">
+                                                                <rect key="frame" x="48" y="0.0" width="304" height="32"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="300" id="ayu-JT-hUb"/>
+                                                                </constraints>
+                                                                <color key="minimumTrackTintColor" red="0.24498385189999999" green="0.33558699489999999" blue="0.98018163439999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </slider>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiF-tf-Qaz">
+                                                                <rect key="frame" x="370" y="0.0" width="42" height="31"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="xoJ-Nw-6J1">
+                                                <rect key="frame" x="0.0" y="537" width="421" height="104"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am sleeping ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IK-Kf-8Q7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="33"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cut-Nm-xCN">
+                                                        <rect key="frame" x="0.0" y="73" width="421" height="31"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poorly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAm-oh-69V">
+                                                                <rect key="frame" x="0.0" y="0.0" width="48.5" height="31"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="100" continuous="NO" minimumValueImage="Account.png" maximumValueImage="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="kau-5P-E2c">
+                                                                <rect key="frame" x="66.5" y="0.0" width="304" height="32"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="300" id="zKW-1m-ZOK"/>
+                                                                </constraints>
+                                                                <color key="minimumTrackTintColor" red="0.24498385189999999" green="0.33558699489999999" blue="0.98018163439999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </slider>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Well" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vje-Pe-Jp8">
+                                                                <rect key="frame" x="388.5" y="0.0" width="32.5" height="31"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="714">
+                                                <rect key="frame" x="0.0" y="695" width="209" height="40"/>
+                                                <color key="backgroundColor" red="0.24498385190963745" green="0.33558699488639832" blue="0.98018163442611694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                                <state key="normal" title="Start Body Assessment">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="MainView" destination="230" id="name-outlet-230"/>
+                        <outlet property="MyLabel" destination="707" id="name-outlet-707"/>
+                        <outlet property="MySlider" destination="463" id="name-outlet-463"/>
+                        <outlet property="ParticipantIdEntry" destination="465" id="name-outlet-465"/>
+                        <outlet property="ParticipantNameEntry" destination="464" id="name-outlet-464"/>
+                        <outlet property="SendButton" destination="714" id="name-outlet-714"/>
+                        <outlet property="WeightEntry" destination="466" id="name-outlet-466"/>
+                        <outlet property="ComparisonSlider" destination="tMQ-xU-3kZ" id="name-outlet-tMQ-xU-3kZ"/>
+                        <outlet property="SleepSlider" destination="kau-5P-E2c" id="name-outlet-kau-5P-E2c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="231" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="78"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Account.png" width="32" height="32"/>
+        <image name="home.png" width="32" height="32"/>
+        <image name="Appointments.png" width="235" height="233"/>
+        <image name="Diary.png" width="235" height="233"/>
+        <image name="Mnd.png" width="235" height="233"/>
+        <image name="Profile.png" width="235" height="233"/>
+        <image name="Research.png" width="235" height="233"/>
+        <image name="Team.png" width="235" height="233"/>
+        <image name="BodyModel.png" width="238" height="731"/>
+        <image name="Splashmnd.png" width="117" height="136"/>
+        <image name="BodymapComplete.png" width="232" height="725"/>
+        <image name="BodymapHeadComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadnNeckComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadnNecknLungsComplete.png" width="238" height="731"/>
+        <image name="BodymapHNlLSALComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadNeckLungsLstomachArmsComplete.png" width="238" height="731"/>
+        <image name="BodymapSilhouetteComplete.png" width="238" height="731"/>
+        <image name="Neck.png" width="238" height="731"/>
+        <image name="Lungs.png" width="238" height="731"/>
+        <image name="SliderButton.png" width="54" height="54"/>
+    </resources>
+</document>
