@@ -23,3 +23,6 @@ pip install -r requirement.txt
 ```
 python manage.py runserver
 ```
+
+#### Final front end on ```master``` branch
+#### Final back end on ```harshp``` branch
