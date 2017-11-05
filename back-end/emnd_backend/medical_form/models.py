@@ -10,7 +10,7 @@ from users.models import User
 
 class Submission(models.Model):
     submission_date = models.DateTimeField(auto_now_add=True)
-    user_id = models.IntegerField()
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     
     #HEAD
     D20a = models.IntegerField(default=0)
