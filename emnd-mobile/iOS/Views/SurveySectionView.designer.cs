@@ -11,12 +11,12 @@ using UIKit;
 
 namespace Emnd.iOS
 {
-    [Register ("BodyView")]
-    partial class BodyView
+    [Register ("SurveySectionView")]
+    partial class SurveySectionView
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton Lung1Button { get; set; }
+        UIKit.UIButton DoneButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -24,17 +24,21 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView NeckComplete { get; set; }
+        UIKit.UILabel SectionInfoLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton Throat1Button { get; set; }
+        UIKit.UILabel SectionNameLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton SkipButton { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (Lung1Button != null) {
-                Lung1Button.Dispose ();
-                Lung1Button = null;
+            if (DoneButton != null) {
+                DoneButton.Dispose ();
+                DoneButton = null;
             }
 
             if (MainView != null) {
@@ -42,14 +46,19 @@ namespace Emnd.iOS
                 MainView = null;
             }
 
-            if (NeckComplete != null) {
-                NeckComplete.Dispose ();
-                NeckComplete = null;
+            if (SectionInfoLabel != null) {
+                SectionInfoLabel.Dispose ();
+                SectionInfoLabel = null;
             }
 
-            if (Throat1Button != null) {
-                Throat1Button.Dispose ();
-                Throat1Button = null;
+            if (SectionNameLabel != null) {
+                SectionNameLabel.Dispose ();
+                SectionNameLabel = null;
+            }
+
+            if (SkipButton != null) {
+                SkipButton.Dispose ();
+                SkipButton = null;
             }
         }
     }

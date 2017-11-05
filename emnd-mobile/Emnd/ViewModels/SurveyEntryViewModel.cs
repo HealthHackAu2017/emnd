@@ -20,6 +20,7 @@ namespace Emnd
             Log.Information("SurveyEntryViewModel constructor");
 
             _navigationService = App.Instance._nav;
+            SectionName = "Start";                
             CloseViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Close(this));
             SendAsCSVCommand = new MvxAsyncCommand(async () => {
                 App.Navigation.ToastMessage("Sending CSV", CurrentSurvey.ParticipantName);                                            
@@ -34,12 +35,17 @@ namespace Emnd
             CloseViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Close(this));
         }
 
-        public string SectionName = "Start";
+        public string SectionName { get; set; }
+        public SurveySection CurrentSection { get; set; }
         public override void Prepare(string parameter)
         {
             Log.Information("Prepare view model with " + parameter);
-            SectionName = parameter;
+            this.SectionName = parameter;
             Init();
+
+            //this.SectionName = "**** " + parameter;
+            RaisePropertyChanged(nameof(this.SectionName));
+            RaisePropertyChanged(nameof(this.CurrentSection));
         }
 
         public void Init()
@@ -61,6 +67,8 @@ namespace Emnd
                 RaiseAllPropertiesChanged();
             }
 
+            var sect = Emnd.Survey.Sections(); // this.Survey;
+            this.CurrentSection = sect.Find(e => e.SectionName.Equals(this.SectionName));
         }
     }
 }
