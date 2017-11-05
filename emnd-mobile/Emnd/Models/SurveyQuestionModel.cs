@@ -27,6 +27,15 @@ namespace Emnd
             public string SectionInfo { get; set; }
             public bool SectionSkipped { get; set; }
             public bool SectionCompleted { get; set; }
+
+            public List<SurveyQuestion> SectionQuestions
+        {
+            get
+            {
+                return new List<SurveyQuestion>();
+            }
+        }
+            
         }
 
     public partial class Survey
@@ -38,6 +47,7 @@ namespace Emnd
         public bool EnteredByParticipant { get; set; }
         public string EnteredBy { get; set; }
         public double Weight { get; set; }
+        public SurveySection CurrentSection { get; set; }
 
         private static List<SurveySection> _sections;
         public static List<SurveySection> Sections()

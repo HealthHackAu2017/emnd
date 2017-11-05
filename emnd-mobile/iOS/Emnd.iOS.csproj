@@ -373,6 +373,10 @@
     <Compile Include="Views\SurveyEntryView.designer.cs">
       <DependentUpon>SurveyEntryView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SurveySectionView.cs" />
+    <Compile Include="Views\SurveySectionView.designer.cs">
+      <DependentUpon>SurveySectionView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -394,6 +398,7 @@
     <InterfaceDefinition Include="Views\SurveyEntryView.storyboard" />
     <InterfaceDefinition Include="Views\AboutMNDView.storyboard" />
     <InterfaceDefinition Include="Views\ResultsGraph.storyboard" />
+    <InterfaceDefinition Include="Views\SurveySectionView.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

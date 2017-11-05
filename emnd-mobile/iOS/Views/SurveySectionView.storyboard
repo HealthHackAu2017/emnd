@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="232">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="231">
+            <objects>
+                <viewController id="232" sceneMemberID="viewController" customClass="SurveySectionView" storyboardIdentifier="SurveySectionView">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="229"/>
+                        <viewControllerLayoutGuide type="bottom" id="230"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="233">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="250" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="59" y="96" width="314" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="251" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="59" y="132" width="473" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="252" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="59" y="187" width="192" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="No Symptoms"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="253" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="306" y="187" width="120" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="MainView" destination="233" id="name-outlet-233"/>
+                        <outlet property="DoneButton" destination="253" id="name-outlet-253"/>
+                        <outlet property="SkipButton" destination="252" id="name-outlet-252"/>
+                        <outlet property="SectionNameLabel" destination="250" id="name-outlet-250"/>
+                        <outlet property="SectionInfoLabel" destination="251" id="name-outlet-251"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="234" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home.png" width="32" height="32"/>
+        <image name="Account.png" width="32" height="32"/>
+        <image name="Appointments.png" width="235" height="233"/>
+        <image name="Diary.png" width="235" height="233"/>
+        <image name="Mnd.png" width="235" height="233"/>
+        <image name="Profile.png" width="235" height="233"/>
+        <image name="Research.png" width="235" height="233"/>
+        <image name="Team.png" width="235" height="233"/>
+        <image name="BodyModel.png" width="238" height="731"/>
+        <image name="Splashmnd.png" width="117" height="136"/>
+        <image name="BodymapComplete.png" width="232" height="725"/>
+        <image name="BodymapHeadComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadnNeckComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadnNecknLungsComplete.png" width="238" height="731"/>
+        <image name="BodymapHNlLSALComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadNeckLungsLstomachArmsComplete.png" width="238" height="731"/>
+        <image name="BodymapSilhouetteComplete.png" width="238" height="731"/>
+        <image name="Neck.png" width="238" height="731"/>
+        <image name="Lungs.png" width="238" height="731"/>
+        <image name="SliderButton.png" width="54" height="54"/>
+    </resources>
+</document>

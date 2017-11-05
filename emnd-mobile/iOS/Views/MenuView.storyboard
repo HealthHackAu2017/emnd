@@ -79,6 +79,9 @@
                             </view>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="DiaryButton" destination="704" id="name-outlet-704"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="466" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

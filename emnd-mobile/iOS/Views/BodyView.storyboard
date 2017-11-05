@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="688" fixedFrame="YES">
-                                <rect key="frame" x="230.2" y="85" width="307.5" height="123.5"/>
+                                <rect key="frame" x="230" y="85" width="307.5" height="123.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Click on each area to complete your assessment. The following questions will ask you to report on your MND symptoms for a range of body regions. </string>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
@@ -60,8 +60,8 @@
                     </view>
                     <connections>
                         <outlet property="MainView" destination="458" id="name-outlet-458"/>
-                        <outlet property="ThroatButton" destination="2292" id="name-outlet-2292"/>
-                        <outlet property="LungButton" destination="2291" id="name-outlet-2291"/>
+                        <outlet property="Throat1Button" destination="2292" id="name-outlet-2292"/>
+                        <outlet property="Lung1Button" destination="2291" id="name-outlet-2291"/>
                         <outlet property="NeckComplete" destination="3223" id="name-outlet-3223"/>
                     </connections>
                 </viewController>

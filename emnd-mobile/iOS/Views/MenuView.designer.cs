@@ -14,8 +14,16 @@ namespace Emnd.iOS
     [Register ("MenuView")]
     partial class MenuView
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton DiaryButton { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (DiaryButton != null) {
+                DiaryButton.Dispose ();
+                DiaryButton = null;
+            }
         }
     }
 }

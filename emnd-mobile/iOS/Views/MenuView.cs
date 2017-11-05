@@ -18,11 +18,27 @@ namespace Emnd.iOS
         {
         }
 
-        public override void ViewDidAppear(bool animated)
+        public override void ViewDidLoad()
         {
-            base.ViewDidAppear(animated);
-            Log.Information("MenuView appeared");
+            base.ViewDidLoad();
+            Log.Information("MenuView load");
+
+            //var NavButton = new UIBarButtonItem();
+            //NavButton.Title = "Add +";
+            //NavButton.Clicked += delegate {
+            //    ShowStartTab();
+            //};
+            //NavigationItem.RightBarButtonItem = NavButton;
+
+            DiaryButton.TouchUpInside += (sender, e) =>
+            {
+                ShowStartTab();
+            };
         }
 
+        public void ShowStartTab()
+        {
+            this.TabBarController.SelectedIndex = 4;
+        }
     }
 }
