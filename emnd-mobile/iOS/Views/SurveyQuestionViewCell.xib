@@ -59,6 +59,7 @@
                 <outlet property="AnswerSlider" destination="351" id="name-outlet-351"/>
             </connections>
             <point key="canvasLocation" x="-141" y="-142"/>
+            <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
         </tableViewCell>
     </objects>
     <resources>
@@ -82,5 +83,6 @@
         <image name="Neck.png" width="238" height="731"/>
         <image name="Lungs.png" width="238" height="731"/>
         <image name="SliderButton.png" width="54" height="54"/>
+        <image name="ResultsGraph.png" width="571" height="324"/>
     </resources>
 </document>

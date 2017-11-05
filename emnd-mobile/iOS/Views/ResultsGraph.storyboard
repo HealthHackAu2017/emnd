@@ -7,7 +7,7 @@
     <scenes>
         <scene sceneID="231">
             <objects>
-                <viewController id="232" sceneMemberID="viewController">
+                <viewController id="232" sceneMemberID="viewController" customClass="ResultsGraphView" storyboardIdentifier="ResultsGraphView">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="229"/>
                         <viewControllerLayoutGuide type="bottom" id="230"/>
@@ -60,6 +60,7 @@
                     </view>
                     <connections>
                         <outlet property="ResultsGraph" destination="981" id="name-outlet-981"/>
+                        <outlet property="GraphImageView" destination="1313" id="name-outlet-1313"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="234" userLabel="First Responder" sceneMemberID="firstResponder"/>

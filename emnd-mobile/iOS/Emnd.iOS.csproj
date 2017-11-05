@@ -381,6 +381,14 @@
     <Compile Include="Views\SurveyQuestionViewCell.designer.cs">
       <DependentUpon>SurveyQuestionViewCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\AboutMNDView.cs" />
+    <Compile Include="Views\AboutMNDView.designer.cs">
+      <DependentUpon>AboutMNDView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ResultsGraphView.cs" />
+    <Compile Include="Views\ResultsGraphView.designer.cs">
+      <DependentUpon>ResultsGraphView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />

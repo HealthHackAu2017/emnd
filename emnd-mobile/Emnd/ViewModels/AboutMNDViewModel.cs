@@ -4,13 +4,14 @@ using MvvmCross.Core.ViewModels;
 
 namespace Emnd
 {
-    public class BodyViewModel : MvxViewModel
+    public class AboutMNDViewModel : MvxViewModel
     {
         private readonly IMvxNavigationService _navigationService;
 
-        public BodyViewModel(IMvxNavigationService navigationService)
+        public AboutMNDViewModel(IMvxNavigationService navigationService)
         {
             _navigationService = navigationService;
         }
     }
 }
+

@@ -84,5 +84,6 @@
         <image name="Neck.png" width="238" height="731"/>
         <image name="Lungs.png" width="238" height="731"/>
         <image name="SliderButton.png" width="54" height="54"/>
+        <image name="ResultsGraph.png" width="571" height="324"/>
     </resources>
 </document>

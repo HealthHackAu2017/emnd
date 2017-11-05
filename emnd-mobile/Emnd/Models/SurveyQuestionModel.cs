@@ -62,9 +62,9 @@ namespace Emnd
                 _sections.Add(new SurveySection { SectionName = "Digestion", SectionInfo = "These questions are about your appetite and digestive health.\nPlease rate the following:" });
                 _sections.Add(new SurveySection { SectionName = "Left arm", SectionInfo = "These questions are about your LEFT ARM.\nPlease rate the following:" });
                 _sections.Add(new SurveySection { SectionName = "Right arm", SectionInfo = "These questions are about your RIGHT ARM.\nPlease rate the following:" });
-                _sections.Add(new SurveySection { SectionName = "Left leg" });
-                _sections.Add(new SurveySection { SectionName = "Right leg" });
-                _sections.Add(new SurveySection { SectionName = "Torso" });
+                _sections.Add(new SurveySection { SectionName = "Left leg", SectionInfo = "These questions are about your LEFT LEG.\nPlease rate the following:" });
+                _sections.Add(new SurveySection { SectionName = "Right leg", SectionInfo = "These questions are about your RIGHT LEG.\nPlease rate the following:" });
+                _sections.Add(new SurveySection { SectionName = "Torso", SectionInfo = "These questions are about your TORSO.\nPlease rate the following:" });
 
             }
             return _sections;
@@ -81,7 +81,7 @@ namespace Emnd
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Today I feel", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Wellbeing", MinText = "Bad", MaxText = "Good" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D16", Question = "Compared to this time two weeks ago, I feel", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Wellbeing", MinText = "Bad", MaxText = "Good" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D20c", Question = "I am sleeping", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Wellbeing", MinText = "Poorly", MaxText = "Well" });
-                _questions.Add(new SurveyQuestion { QuestionVariable = "D21", Question = "Today I weigh", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 74, Section = "Wellbeing", MinText = "", MaxText = "kg" });
+               // _questions.Add(new SurveyQuestion { QuestionVariable = "D21", Question = "Today I weigh", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 74, Section = "Wellbeing", MinText = "", MaxText = "kg" });
 
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Depression", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Mental Health", MinText = "Low", MaxText = "High" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Anxiety", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Mental Health", MinText = "Low", MaxText = "High" });

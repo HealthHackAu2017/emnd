@@ -7,7 +7,7 @@
     <scenes>
         <scene sceneID="231">
             <objects>
-                <viewController id="232" sceneMemberID="viewController">
+                <viewController id="232" sceneMemberID="viewController" customClass="AboutMNDView" storyboardIdentifier="AboutMNDView">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="229"/>
                         <viewControllerLayoutGuide type="bottom" id="230"/>
@@ -53,6 +53,9 @@ SHOWmndME DISCLAIMER [CLICK HERE]
                             </view>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="AboutText" destination="668" id="name-outlet-668"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="234" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -38,7 +38,7 @@ namespace Emnd.iOS
 
         public void ShowStartTab()
         {
-            this.TabBarController.SelectedIndex = 4;
+            this.TabBarController.SelectedIndex = 2;
         }
     }
 }
