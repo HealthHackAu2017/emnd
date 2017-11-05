@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Emnd.SurveyListPage" xmlns:local="clr-namespace:Emnd;assembly=Emnd" xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize">
+    <ContentPage.Content>
+        <StackLayout Spacing="0" Padding="0" VerticalOptions="Fill" BackgroundColor="White">
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="StartAndExpand">
+                    <TableView Intent="Form" VerticalOptions="Start" MinimumHeightRequest="210" HeightRequest="210">
+                        <TableRoot>
+                            <TableSection Title="Profile">
+                                <local:SurveyEntryCell LabelText="First" Icon="md-person" Placeholder="First Name" BindingField="Details.Info.FirstName" />
+                                <local:SurveyEntryCell LabelText="Last" Placeholder="Last Name" BindingField="Details.Info.LastName" />
+                                <local:SurveyEntryCell LabelText="Survey ID" Icon="md-info" Placeholder="Participant ID" BindingField="Details.Detail.Mobile" Keyboard="Telephone" />
+                                <!--ViewCell>
+                                    <StackLayout x:Name="ChangePassword" Orientation="Horizontal" Margin="0,0,0,0" HeightRequest="40">
+                                        <iconize:IconImage HeightRequest="20" WidthRequest="20" Margin="8,0" Icon="md-lock" IconColor="Gray" />
+                                        <Label Text="Change Password" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" TextColor="Gray">
+                                            <Label.Margin>
+                                                <OnPlatform x:TypeArguments="Thickness" iOS="0,0,0,0" Android="0,8,0,0" />
+                                            </Label.Margin>
+                                        </Label>
+                                        <iconize:IconButton Margin="0,0,8,0" FontSize="30" Text="md-navigate-next" TextColor="Gray" WidthRequest="50" Command="{Binding ChangePassword}" />
+                                    </StackLayout>
+                                </ViewCell-->
+                            </TableSection>
+                        </TableRoot>
+                    </TableView>
+
+
+                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label Text="Today I feel" HeightRequest="20" Margin="20,10,20,0" />
+                    <Slider Minimum="0" Maximum="100" VerticalOptions="CenterAndExpand" Value="50" Margin="20,0" />
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                        <Label Text="Bad" Margin="20,0,20,0" />
+                        <Label Text="Good" Margin="20,0,20,20" HorizontalOptions="EndAndExpand" />
+                    </StackLayout>
+
+                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label Text="Compared to this time two weeks ago, I feel" HeightRequest="20" Margin="20,10,20,0" />
+                    <Slider Minimum="0" Maximum="100" VerticalOptions="CenterAndExpand" Value="50" Margin="20,0" />
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                        <Label Text="Bad" Margin="20,0,20,0" />
+                        <Label Text="Good" Margin="20,0,20,20" HorizontalOptions="EndAndExpand" />
+                    </StackLayout>
+
+                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label Text="I am sleeping" HeightRequest="20" Margin="20,10,20,0" />
+                    <Slider Minimum="0" Maximum="100" VerticalOptions="CenterAndExpand" Value="50" Margin="20,0" />
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                        <Label Text="NT SP" Margin="20,0,20,0" />
+                        <Label Text="Well" Margin="20,0,20,20" HorizontalOptions="EndAndExpand" />
+                    </StackLayout>
+
+                    <BoxView HeightRequest="1" BackgroundColor="Gray" />
+                    <Label Text="I am sleeping" HeightRequest="20" Margin="20,10,20,0" />
+                    <Slider Minimum="0" Maximum="100" VerticalOptions="CenterAndExpand" Value="50" Margin="20,0" />
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                        <Label Text="Poorly" Margin="20,0,20,0" />
+                        <Label Text="OK" Margin="20,0,20,20" HorizontalOptions="EndAndExpand" />
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

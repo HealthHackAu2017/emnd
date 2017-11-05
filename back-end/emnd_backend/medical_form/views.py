@@ -28,6 +28,15 @@ def submission_list(request):
         submissions = Submission.objects.all()
         serializer = SubmissionSerializer(submissions, many=True)
         return Response(serializer.data)
+<<<<<<< HEAD
+=======
+    elif request.method == 'POST':
+        serializer = SubmissionSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+>>>>>>> 6db76206406df1e7390ab216a110893d79a58fbe
 
 
 

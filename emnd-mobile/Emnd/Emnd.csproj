@@ -32,6 +32,18 @@
    <EmbeddedResource Include="Views\AboutPageADA.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+   <EmbeddedResource Include="Views\SurveyEntryCell.xaml">
+     <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+     <SubType>Designer</SubType>
+   </EmbeddedResource>
+   <EmbeddedResource Include="Views\SurveyListPage.xaml">
+     <SubType>Designer</SubType>
+     <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+   </EmbeddedResource>
+   <EmbeddedResource Include="Views\DashboardPage.xaml">
+     <SubType>Designer</SubType>
+     <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+   </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="ViewModels\LoginViewModel.cs" />
@@ -64,10 +76,26 @@
     <Compile Include="ViewModels\TabRootViewModel.cs" />
     <Compile Include="ViewModels\SurveyViewModel.cs" />
     <Compile Include="Services\AppNavigationService.cs" />
-    <Compile Include="Models\AccountRQModel.cs" />
+    <Compile Include="Models\ProfileModel.cs" />
     <Compile Include="AkavacheSqliteLinkerOverride.cs" />
     <Compile Include="Services\Cache.cs" />
     <Compile Include="ViewModels\ProfileViewModel.cs" />
+    <Compile Include="Views\LineEntry.cs" />
+    <Compile Include="Views\SurveyEntryCell.xaml.cs">
+      <DependentUpon>SurveyEntryCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SurveyListPage.xaml.cs">
+      <DependentUpon>SurveyListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashboardPage.xaml.cs">
+      <DependentUpon>DashboardPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\BodymapViewModel.cs" />
+    <Compile Include="ViewModels\BodyViewModel.cs" />
+    <Compile Include="Models\SurveyQuestionModel.cs" />
+    <Compile Include="ViewModels\SurveyEntryViewModel.cs" />
+    <Compile Include="ViewModels\SurveySectionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Acr.UserDialogs">

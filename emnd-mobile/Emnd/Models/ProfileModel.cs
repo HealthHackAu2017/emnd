@@ -7,7 +7,7 @@
     using Newtonsoft.Json;
     using J = Newtonsoft.Json.JsonPropertyAttribute;
 
-    public partial class AccountRQModel
+    public partial class ProfileModel
     {
         [J("ErrorMessage")] public string ErrorMessage { get; set; }
         [J("FirstName")] public string FirstName { get; set; }
@@ -26,8 +26,8 @@
 
     }
 
-    public partial class AccountRQModel
+    public partial class ProfileModel
     {
-        public static AccountRQModel FromJson(string json) => JsonConvert.DeserializeObject<AccountRQModel>(json, Converter.Settings);
+        public static ProfileModel FromJson(string json) => JsonConvert.DeserializeObject<ProfileModel>(json, Converter.Settings);
     }
 }

@@ -10,10 +10,28 @@ from users.models import User
 
 class Submission(models.Model):
     submission_date = models.DateTimeField(auto_now_add=True)
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    q1 = models.IntegerField()
-    q2 = models.IntegerField()
-    q3 = models.IntegerField()
+    user_id = models.IntegerField()
+    
+    #HEAD
+    D20a = models.IntegerField(default=0)
+    D20b = models.IntegerField(default=0)
+    D20c = models.IntegerField(default=0)
+    D20d = models.IntegerField(default=0)
 
-    class Meta:
-        ordering = ('submission_date',)
+    #  THROAT 
+    D21a = models.IntegerField(default=0)    
+    D21b = models.IntegerField(default=0)
+    D21c = models.IntegerField(default=0)
+    D21d = models.IntegerField(default=0)
+    D21e = models.IntegerField(default=0)
+    D21f = models.IntegerField(default=0)
+
+    # LUNGS
+    D22a = models.IntegerField(default=0)
+    D22b = models.IntegerField(default=0)
+    D22c = models.IntegerField(default=0)
+
+
+    
+#    class Meta:
+#       ordering = ('created',)

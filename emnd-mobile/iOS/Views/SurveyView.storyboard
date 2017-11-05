@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="453">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="453">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Survey View-->
         <scene sceneID="452">
             <objects>
-                <viewController id="453" sceneMemberID="viewController" storyboardIdentifier="SurveyView" customClass="SurveyView">
+                <viewController storyboardIdentifier="SurveyView" id="453" customClass="SurveyView" sceneMemberID="viewController" title="Throat Assessment">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="450"/>
                         <viewControllerLayoutGuide type="bottom" id="451"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="454">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="1506" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="These questions are about saliva and your ability to swallow. Please rate the following:&#xD;">
+                                <rect key="frame" x="234" y="77" width="301" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="455" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,11 +42,28 @@
     <resources>
         <image name="home.png" width="32" height="32"/>
         <image name="Account.png" width="32" height="32"/>
-        <image name="Rewards.png" width="32" height="32"/>
+        <image name="Appointments.png" width="235" height="233"/>
+        <image name="Diary.png" width="235" height="233"/>
+        <image name="Mnd.png" width="235" height="233"/>
+        <image name="Profile.png" width="235" height="233"/>
+        <image name="Research.png" width="235" height="233"/>
+        <image name="Team.png" width="235" height="233"/>
+        <image name="BodyModel.png" width="238" height="731"/>
+        <image name="Splashmnd.png" width="117" height="136"/>
+        <image name="BodymapComplete.png" width="232" height="725"/>
+        <image name="BodymapHeadComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadnNeckComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadnNecknLungsComplete.png" width="238" height="731"/>
+        <image name="BodymapHNlLSALComplete.png" width="238" height="731"/>
+        <image name="BodymapHeadNeckLungsLstomachArmsComplete.png" width="238" height="731"/>
+        <image name="BodymapSilhouetteComplete.png" width="238" height="731"/>
+        <image name="Neck.png" width="238" height="731"/>
+        <image name="Lungs.png" width="238" height="731"/>
+        <image name="SliderButton.png" width="54" height="54"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

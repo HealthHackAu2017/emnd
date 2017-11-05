@@ -71,5 +71,9 @@
 	<string>Record how you feel</string>
 	<key>CFBundleName</key>
 	<string>EMnd</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon-3.appiconset</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Assets.xcassets/LaunchImage.launchimage</string>
 </dict>
 </plist>
