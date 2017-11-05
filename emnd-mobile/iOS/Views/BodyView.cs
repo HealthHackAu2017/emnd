@@ -24,13 +24,7 @@ namespace Emnd.iOS
             base.ViewDidLoad();
             Log.Information("MenuView load");
 
-            //var NavButton = new UIBarButtonItem();
-            //NavButton.Title = "Add +";
-            //NavButton.Clicked += delegate {
-            //    ShowStartTab();
-            //};
-            //NavigationItem.RightBarButtonItem = NavButton;
-            NavigationItem.Title = ViewModel.SectionName;
+             NavigationItem.Title = ViewModel.SectionName;
 
             HeadButton.TouchUpInside += (sender, e) =>
             {

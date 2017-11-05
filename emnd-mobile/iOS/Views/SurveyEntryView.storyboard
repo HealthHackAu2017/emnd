@@ -32,7 +32,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="kdX-i4-NTD">
-                                        <rect key="frame" x="51" y="120" width="663" height="659"/>
+                                        <rect key="frame" x="51" y="120" width="663" height="574"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mNe-2o-cIT">
@@ -171,22 +171,6 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="714" misplaced="YES">
-                                                <rect key="frame" x="0.0" y="619" width="209" height="40"/>
-                                                <color key="backgroundColor" red="0.24498385190963745" green="0.33558699488639832" blue="0.98018163442611694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="lPc-Ur-qeC"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
-                                                <state key="normal" title="Start Body Assessment">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <real key="value" value="7"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -202,7 +186,6 @@
                         <outlet property="MySlider" destination="463" id="name-outlet-463"/>
                         <outlet property="ParticipantIdEntry" destination="465" id="name-outlet-465"/>
                         <outlet property="ParticipantNameEntry" destination="464" id="name-outlet-464"/>
-                        <outlet property="SendButton" destination="714" id="name-outlet-714"/>
                         <outlet property="SleepSlider" destination="kau-5P-E2c" id="name-outlet-kau-5P-E2c"/>
                         <outlet property="WeightEntry" destination="466" id="name-outlet-466"/>
                     </connections>

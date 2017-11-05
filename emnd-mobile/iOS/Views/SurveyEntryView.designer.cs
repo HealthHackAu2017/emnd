@@ -40,10 +40,6 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton SendButton { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UISlider SleepSlider { get; set; }
 
         [Outlet]
@@ -80,11 +76,6 @@ namespace Emnd.iOS
             if (ParticipantNameEntry != null) {
                 ParticipantNameEntry.Dispose ();
                 ParticipantNameEntry = null;
-            }
-
-            if (SendButton != null) {
-                SendButton.Dispose ();
-                SendButton = null;
             }
 
             if (SleepSlider != null) {

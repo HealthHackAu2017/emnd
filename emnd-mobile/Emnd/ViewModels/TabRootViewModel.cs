@@ -27,7 +27,7 @@ namespace Emnd
         {
             var tasks = new List<Task>();
             tasks.Add(_navigationService.Navigate<MenuViewModel>());
-            tasks.Add(_navigationService.Navigate<BodyViewModel>());
+            //tasks.Add(_navigationService.Navigate<BodyViewModel>());
             //tasks.Add(_navigationService.Navigate<SurveyViewModel>());
             //tasks.Add(_navigationService.Navigate<ProfileViewModel>());
             tasks.Add(_navigationService.Navigate<SurveyEntryViewModel>());
