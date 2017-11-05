@@ -79,7 +79,7 @@ namespace Emnd.iOS
             base.ViewDidAppear(animated);
             Log.Information("Body View appear");
 
-            if (FirstLoad++ > 2)
+            if (FirstLoad++ > 1)
             {
                 if (NeckComplete.Hidden)
                 {
