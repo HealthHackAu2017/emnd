@@ -35,8 +35,9 @@ namespace Emnd.iOS
             set.Bind(ParticipantNameEntry).To(vm => vm.Survey.ParticipantName);
             set.Bind(ParticipantIdEntry).To(vm => vm.Survey.ParticipantID);
             set.Bind(WeightEntry).To(vm => vm.Survey.Weight);
-            set.Bind(SendButton).To(vm => vm.ShowBodyMapCommand);
+            //set.Bind(SendButton).To(vm => vm.ShowBodyMapCommand);
             set.Apply();
+            SendButton.TouchUpInside += (sender, e) => {ViewModel.ShowBodyMapCommand.Execute();};
 
             //this.FeedbackTextField.ShouldReturn += SearchBar_ShouldReturn;
             //this.FeedbackButton.TouchUpInside += FeedbackButton_TouchUpInside;

@@ -24,7 +24,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="347">
-                        <rect key="frame" x="12" y="47" width="382.5" height="104"/>
+                        <rect key="frame" x="12" y="47" width="480" height="104"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today I feel         " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="348">
@@ -33,8 +33,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="349">
-                                <rect key="frame" x="0.0" y="73" width="382.5" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="349" distribution="equalSpacing">
+                                <rect key="frame" x="0.0" y="73" width="480" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="350">
                                         <rect key="frame" x="0.0" y="0.0" width="27" height="31"/>
@@ -42,20 +42,23 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="100" continuous="NO" minimumValueImage="Account.png" maximumValueImage="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="351">
-                                        <rect key="frame" x="34" y="0.0" width="304" height="32"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="100" continuous="NO" minimumValueImage="Account.png" maximumValueImage="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="351" misplaced="YES">
+                                        <rect key="frame" x="142.5" y="0.0" width="185" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="352"/>
                                         </constraints>
                                         <color key="minimumTrackTintColor" red="0.24498385190963745" green="0.33558699488639832" blue="0.98018163442611694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="353">
-                                        <rect key="frame" x="345" y="0.0" width="37.5" height="31"/>
+                                        <rect key="frame" x="442.5" y="0.0" width="37.5" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="480" id="izh-4W-OlV"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                     </stackView>
