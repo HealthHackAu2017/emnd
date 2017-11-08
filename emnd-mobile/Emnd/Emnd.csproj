@@ -69,7 +69,6 @@
     <Compile Include="Services\IDeviceService.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Helpers\Command.cs" />
-    <Compile Include="Helpers\ServiceLocator.cs" />
     <Compile Include="Services\DataService.cs" />
     <Compile Include="Services\NetworkService.cs" />
     <Compile Include="Models\BaseJsonData.cs" />

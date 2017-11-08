@@ -9,6 +9,7 @@ using Xamarin.Forms.Platform.iOS;
 using Serilog;
 using MvvmCross.Binding.iOS.Views;
 using System.Collections.Generic;
+using CoreGraphics;
 
 namespace Emnd.iOS
 {
@@ -26,6 +27,7 @@ namespace Emnd.iOS
             Log.Information("Survey Start load");
 
             this.NavigationItem.Title = "Start Here";
+
             var NavButton = new UIBarButtonItem();
             NavButton.Title = "START";
             NavButton.Clicked += delegate {
@@ -33,10 +35,12 @@ namespace Emnd.iOS
             };
             NavigationItem.RightBarButtonItem = NavButton;
 
-
-            //MySlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
-            //ComparisonSlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
-            //SleepSlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
+            var HomeButton = new UIBarButtonItem();
+            HomeButton.Title = "HOME";
+            HomeButton.Clicked += delegate {
+                this.TabBarController.SelectedIndex = 0;
+            };
+            NavigationItem.LeftBarButtonItem = HomeButton;
 
             var set = this.CreateBindingSet<SurveyEntryView, SurveyEntryViewModel>();
             set.Bind(ParticipantNameEntry).To(vm => vm.Survey.ParticipantName);

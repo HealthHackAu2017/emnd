@@ -12,6 +12,9 @@ namespace Emnd
 
     using Newtonsoft.Json;
 
+    /// <summary>
+    /// The survey responses which are transmitted to the server
+    /// </summary>
     public partial class SubmissionDTO
     {
         [JsonProperty("d20a")]

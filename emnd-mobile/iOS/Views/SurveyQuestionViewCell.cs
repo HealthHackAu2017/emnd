@@ -13,8 +13,7 @@ namespace Emnd.iOS
     {
         public static readonly NSString Key = new NSString("SurveyQuestionViewCell");
         public static readonly UINib Nib;
-        public static UINavigationController NavigationController { get; set; }
-
+ 
         static SurveyQuestionViewCell()
         {
             Nib = UINib.FromName("SurveyQuestionViewCell", NSBundle.MainBundle);
@@ -24,8 +23,7 @@ namespace Emnd.iOS
         {
         }
 
-        // Bind manually when autobinding failed
-        public bool IsBound;
+        public bool IsBound = false;
         public void BindModel(SurveyEntryViewModel vm, SurveyQuestion model)
         {
             Log.Information("Cell manual bind");

@@ -28,10 +28,7 @@ namespace Emnd.iOS
             NavigationItem.Title = ViewModel.SectionName;
             var NavButton = new UIBarButtonItem();
             NavButton.Title = "SAVE";
-            NavButton.Clicked += async (object sender, EventArgs e) =>
-            {
-                await SaveSurveyAsync();
-            };
+            NavButton.Clicked += SaveButton_Clicked;
             NavigationItem.RightBarButtonItem = NavButton;
 
 
@@ -91,65 +88,13 @@ namespace Emnd.iOS
             }
         }
 
-
-        public async Task<bool> SaveSurveyAsync()
+        async void SaveButton_Clicked(object sender, EventArgs e)
         {
-            bool success = false;
-            string ErrorMessage = "An unknown error occurred";
-            //UserDialogs.Instance.ShowLoading("Authenticating");
-            try
+            var saved = await ViewModel.SaveSurveyAsync();
+            if (saved)
             {
-                var SubmissionRequest = new SubmissionDTO
-                {
-                    UserId = 1
-                };
-                // Map the user answers
-                foreach (var q in ViewModel.Survey._questions)
-                {
-                    var property = SubmissionRequest.GetType().GetProperty(q.QuestionVariable);
-                    if (property != null)
-                    {
-                        property.SetValue(SubmissionRequest, q.AnswerValue, null);
-                    }
-                    else
-                    {
-                        Log.Information("Skipping " + q.QuestionVariable);
-                    }
-                }
-                var json = SubmissionRequest.AsJsonString();
-                Log.Information("Saving JSON to server " + json.AsJsonString());
-                //return success;
-
-                var network = new NetworkService();
-
-                var submissionResult = await network.PostData<SubmissionResultDTO>("/submissions/submit/", json, "Saving...");
-                if (submissionResult != null && submissionResult.Count > 0)
-                {
-                    //set session token
-                    //SubmissionResultDTO result = submissionResult[0];
-                    //Log.Information("Received result " + result);
-                    success = true;
-                }
+                ShowResultPage();
             }
-            catch (Exception ex)
-            {
-                ErrorMessage = ex.Message;
-                Log.Error("AsyncTryLoginCommand " + ex.StackTrace);
-            }
-            finally
-            {
-                //UserDialogs.Instance.HideLoading();
-                Log.Information("Success");
-                if (success)
-                {
-                    ShowResultPage();
-                }
-                if (!success)
-                {
-                    App.Navigation.ShowError(ErrorMessage);
-                }
-            }
-            return success;
         }
 
         public void ShowResultPage()

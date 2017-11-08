@@ -25,13 +25,19 @@ namespace Emnd.iOS
 
             DiaryButton.TouchUpInside += (sender, e) =>
             {
-                ShowStartTab();
+                this.TabBarController.SelectedIndex = 1;
             };
-        }
 
-        public void ShowStartTab()
-        {
-            this.TabBarController.SelectedIndex = 1;
+            ProfileButton.TouchUpInside += (sender, e) =>
+            {
+                this.TabBarController.SelectedIndex = 2;
+            };
+
+            AboutButton.TouchUpInside += (sender, e) =>
+            {
+                this.TabBarController.SelectedIndex = 3;
+            };
+
         }
     }
 }

@@ -16,6 +16,7 @@ using Microsoft.Azure.Mobile.Push;
 using System.Collections.Generic;
 using Plugin.Toasts;
 using UserNotifications;
+using Akavache;
 
 namespace Emnd.iOS
 {
@@ -78,6 +79,8 @@ namespace Emnd.iOS
             ToastNotification.Init();
 
             Emnd.App.Navigation = new Emnd.AppNavigationService();
+            // Make sure you set the application name before doing any inserts or gets
+            BlobCache.ApplicationName = "Emnd";
 
             //MVX stuff
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
@@ -131,7 +134,9 @@ namespace Emnd.iOS
 
         public override void WillTerminate(UIApplication application)
         {
-            // Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
+            BlobCache.Shutdown().Wait();
+            base.WillTerminate(application);
+
         }
     }
 }
