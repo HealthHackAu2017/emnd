@@ -27,6 +27,14 @@ namespace Emnd.iOS
             Log.Information("Survey Start load");
 
             this.NavigationItem.Title = "Start Here";
+            var NavButton = new UIBarButtonItem();
+            NavButton.Title = "START";
+            NavButton.Clicked += delegate {
+                ViewModel.ShowBodyMapCommand.Execute(null);
+            };
+            NavigationItem.RightBarButtonItem = NavButton;
+
+
             MySlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
             ComparisonSlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
             SleepSlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
@@ -35,10 +43,9 @@ namespace Emnd.iOS
             set.Bind(ParticipantNameEntry).To(vm => vm.Survey.ParticipantName);
             set.Bind(ParticipantIdEntry).To(vm => vm.Survey.ParticipantID);
             set.Bind(WeightEntry).To(vm => vm.Survey.Weight);
-            //set.Bind(MyLabel).To(vm => vm.D21.Question);
-            //set.Bind(MySlider).To(vm => vm.D21.DefaultValue);
-            set.Bind(SendButton).To(vm => vm.SendAsCSVCommand);
+            //set.Bind(SendButton).To(vm => vm.ShowBodyMapCommand);
             set.Apply();
+            //SendButton.TouchUpInside += (sender, e) => {ViewModel.ShowBodyMapCommand.Execute();};
 
             //this.FeedbackTextField.ShouldReturn += SearchBar_ShouldReturn;
             //this.FeedbackButton.TouchUpInside += FeedbackButton_TouchUpInside;
@@ -50,15 +57,5 @@ namespace Emnd.iOS
             base.ViewDidAppear(animated);
             Log.Information("Survey Start appeared");
         }
-
-
-        Xamarin.Forms.Page SurveyListPage;
-        private void ShowSurveyListPage()
-        {
-            SurveyListPage = new SurveyListPage();
-            var pageViewController = SurveyListPage.CreateViewController();
-            this.NavigationController.PushViewController(pageViewController, false);
-        }
-
     }
 }

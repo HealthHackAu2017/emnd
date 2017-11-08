@@ -24,14 +24,5 @@ namespace Emnd.iOS
             Log.Information("Survey View appeared");
         }
 
-
-        Xamarin.Forms.Page SurveyListPage;
-        private void ShowSurveyListPage()
-        {
-            SurveyListPage = new SurveyListPage();
-            var pageViewController = SurveyListPage.CreateViewController();
-            this.NavigationController.PushViewController(pageViewController, false);
-        }
-
     }
 }

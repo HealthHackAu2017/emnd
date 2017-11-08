@@ -377,6 +377,18 @@
     <Compile Include="Views\SurveySectionView.designer.cs">
       <DependentUpon>SurveySectionView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\SurveyQuestionViewCell.cs" />
+    <Compile Include="Views\SurveyQuestionViewCell.designer.cs">
+      <DependentUpon>SurveyQuestionViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AboutMNDView.cs" />
+    <Compile Include="Views\AboutMNDView.designer.cs">
+      <DependentUpon>AboutMNDView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ResultsGraphView.cs" />
+    <Compile Include="Views\ResultsGraphView.designer.cs">
+      <DependentUpon>ResultsGraphView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -386,6 +398,7 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Remove="Views\Profile.storyboard" />
+    <InterfaceDefinition Remove="Views\Storyboard.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -395,7 +408,10 @@
     <InterfaceDefinition Include="Views\BodyView.storyboard" />
     <InterfaceDefinition Include="Views\MenuView.storyboard" />
     <InterfaceDefinition Include="Views\SurveyEntryView.storyboard" />
+    <InterfaceDefinition Include="Views\AboutMNDView.storyboard" />
+    <InterfaceDefinition Include="Views\ResultsGraph.storyboard" />
     <InterfaceDefinition Include="Views\SurveySectionView.storyboard" />
+    <InterfaceDefinition Include="Views\SurveyQuestionViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -456,6 +472,9 @@
     <BundleResource Include="Resources\SliderButton.png" />
     <BundleResource Include="Resources\SliderButton%402x.png" />
     <BundleResource Include="Resources\SliderButton%403x.png" />
+    <BundleResource Include="Resources\ResultsGraph.png" />
+    <BundleResource Include="Resources\ResultsGraph%402x.png" />
+    <BundleResource Include="Resources\ResultsGraph%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Remove="iTunesArtwork%402x" />

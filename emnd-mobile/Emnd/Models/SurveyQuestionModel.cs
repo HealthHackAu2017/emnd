@@ -28,13 +28,13 @@ namespace Emnd
             public bool SectionSkipped { get; set; }
             public bool SectionCompleted { get; set; }
 
-            public List<SurveyQuestion> SectionQuestions
-        {
-            get
-            {
-                return new List<SurveyQuestion>();
-            }
-        }
+        public List<SurveyQuestion> SectionQuestions { get; set; }
+        //{
+        //    get
+        //    {
+        //        return new List<SurveyQuestion>();
+        //    }
+        //}
             
         }
 
@@ -49,8 +49,8 @@ namespace Emnd
         public double Weight { get; set; }
         public SurveySection CurrentSection { get; set; }
 
-        private static List<SurveySection> _sections;
-        public static List<SurveySection> Sections()
+        public List<SurveySection> _sections;
+        public List<SurveySection> NewSections()
         {
             if (_sections == null)
             {
@@ -62,17 +62,17 @@ namespace Emnd
                 _sections.Add(new SurveySection { SectionName = "Digestion", SectionInfo = "These questions are about your appetite and digestive health.\nPlease rate the following:" });
                 _sections.Add(new SurveySection { SectionName = "Left arm", SectionInfo = "These questions are about your LEFT ARM.\nPlease rate the following:" });
                 _sections.Add(new SurveySection { SectionName = "Right arm", SectionInfo = "These questions are about your RIGHT ARM.\nPlease rate the following:" });
-                _sections.Add(new SurveySection { SectionName = "Left leg" });
-                _sections.Add(new SurveySection { SectionName = "Right leg" });
-                _sections.Add(new SurveySection { SectionName = "Torso" });
+                _sections.Add(new SurveySection { SectionName = "Left leg", SectionInfo = "These questions are about your LEFT LEG.\nPlease rate the following:" });
+                _sections.Add(new SurveySection { SectionName = "Right leg", SectionInfo = "These questions are about your RIGHT LEG.\nPlease rate the following:" });
+                _sections.Add(new SurveySection { SectionName = "Torso", SectionInfo = "These questions are about your TORSO.\nPlease rate the following:" });
 
             }
             return _sections;
         }
 
 
-        private static List<SurveyQuestion> _questions;
-        public static List<SurveyQuestion> NewQuestions()
+        public List<SurveyQuestion> _questions;
+        public List<SurveyQuestion> NewQuestions()
         {
             if (_questions == null)
             {
@@ -81,7 +81,7 @@ namespace Emnd
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Today I feel", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Wellbeing", MinText = "Bad", MaxText = "Good" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D16", Question = "Compared to this time two weeks ago, I feel", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Wellbeing", MinText = "Bad", MaxText = "Good" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D20c", Question = "I am sleeping", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Wellbeing", MinText = "Poorly", MaxText = "Well" });
-                _questions.Add(new SurveyQuestion { QuestionVariable = "D21", Question = "Today I weigh", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 74, Section = "Wellbeing", MinText = "", MaxText = "kg" });
+               // _questions.Add(new SurveyQuestion { QuestionVariable = "D21", Question = "Today I weigh", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 74, Section = "Wellbeing", MinText = "", MaxText = "kg" });
 
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Depression", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Mental Health", MinText = "Low", MaxText = "High" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Anxiety", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Mental Health", MinText = "Low", MaxText = "High" });
@@ -118,7 +118,15 @@ namespace Emnd
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Pain", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Right arm", MinText = "None", MaxText = "Severe" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Physical Fatigue", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Right arm", MinText = "None", MaxText = "Severe" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Wasting", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Right arm", MinText = "None", MaxText = "Severe" });
-            }
+
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Twitching", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Cramping", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Weakness", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Stiffness", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Pain", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Physical Fatigue", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Wasting", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
+}
             return _questions;
         }
 

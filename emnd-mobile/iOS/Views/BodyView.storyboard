@@ -55,14 +55,70 @@
                                 <rect key="frame" x="265" y="208" width="238" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3711" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" showsTouchWhenHighlighted="YES">
+                                <rect key="frame" x="342" y="464" width="89" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3742" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" showsTouchWhenHighlighted="YES">
+                                <rect key="frame" x="342" y="219" width="89" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3743" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" showsTouchWhenHighlighted="YES">
+                                <rect key="frame" x="439" y="348" width="125" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3744" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" showsTouchWhenHighlighted="YES">
+                                <rect key="frame" x="215" y="335" width="119" height="302"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3745" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" showsTouchWhenHighlighted="YES">
+                                <rect key="frame" x="389" y="606" width="89" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3746" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" showsTouchWhenHighlighted="YES">
+                                <rect key="frame" x="301" y="597" width="80" height="346"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3747" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" showsTouchWhenHighlighted="YES" hidden="YES">
+                                <rect key="frame" x="560" y="428" width="179" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Torso">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="MainView" destination="458" id="name-outlet-458"/>
-                        <outlet property="Throat1Button" destination="2292" id="name-outlet-2292"/>
-                        <outlet property="Lung1Button" destination="2291" id="name-outlet-2291"/>
+                        <outlet property="ThroatButton" destination="2292" id="name-outlet-2292"/>
+                        <outlet property="LungButton" destination="2291" id="name-outlet-2291"/>
                         <outlet property="NeckComplete" destination="3223" id="name-outlet-3223"/>
+                        <outlet property="HeadButton" destination="3742" id="name-outlet-3742"/>
+                        <outlet property="DigestionButton" destination="3711" id="name-outlet-3711"/>
+                        <outlet property="LeftArmButton" destination="3743" id="name-outlet-3743"/>
+                        <outlet property="RightArmButton" destination="3744" id="name-outlet-3744"/>
+                        <outlet property="LeftLegButton" destination="3745" id="name-outlet-3745"/>
+                        <outlet property="RightLegButton" destination="3746" id="name-outlet-3746"/>
+                        <outlet property="TorsoButton" destination="3747" id="name-outlet-3747"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="459" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,6 +147,7 @@
         <image name="Neck.png" width="238" height="731"/>
         <image name="Lungs.png" width="238" height="731"/>
         <image name="SliderButton.png" width="54" height="54"/>
+        <image name="ResultsGraph.png" width="571" height="324"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

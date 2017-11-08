@@ -24,11 +24,11 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel SectionInfoLabel { get; set; }
+        UIKit.UITableView QuestionTable { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel SectionNameLabel { get; set; }
+        UIKit.UILabel SectionInfoLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -46,14 +46,14 @@ namespace Emnd.iOS
                 MainView = null;
             }
 
+            if (QuestionTable != null) {
+                QuestionTable.Dispose ();
+                QuestionTable = null;
+            }
+
             if (SectionInfoLabel != null) {
                 SectionInfoLabel.Dispose ();
                 SectionInfoLabel = null;
-            }
-
-            if (SectionNameLabel != null) {
-                SectionNameLabel.Dispose ();
-                SectionNameLabel = null;
             }
 
             if (SkipButton != null) {
