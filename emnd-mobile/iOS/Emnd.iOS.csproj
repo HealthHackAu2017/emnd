@@ -373,13 +373,10 @@
     <Compile Include="Views\SurveyEntryView.designer.cs">
       <DependentUpon>SurveyEntryView.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="Views\SurveySectionView.cs" />
     <Compile Include="Views\SurveySectionView.designer.cs">
       <DependentUpon>SurveySectionView.cs</DependentUpon>
     </Compile>
->>>>>>> 13d7e741a4cbc80512af7ed4ab77bb2c60919f9c
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -398,10 +395,7 @@
     <InterfaceDefinition Include="Views\BodyView.storyboard" />
     <InterfaceDefinition Include="Views\MenuView.storyboard" />
     <InterfaceDefinition Include="Views\SurveyEntryView.storyboard" />
-<<<<<<< HEAD
-=======
     <InterfaceDefinition Include="Views\SurveySectionView.storyboard" />
->>>>>>> 13d7e741a4cbc80512af7ed4ab77bb2c60919f9c
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
