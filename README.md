@@ -17,12 +17,9 @@ virtualenv -p python3 env
 1. Clone repository
 2. Navigate to the back-end folder and download python dependencies<br>
 ```
-pip install -r requirement.txt
+pip3 install -r requirement.txt
 ```
 3. Start the Django server<br>
 ```
-python manage.py runserver
+python3 manage.py runserver
 ```
-
-#### Final front end on ```master``` branch
-#### Final back end on ```harshp``` branch
