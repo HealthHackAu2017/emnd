@@ -56,10 +56,6 @@
                                 <rect key="frame" x="265" y="208" width="238" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lungs.png" translatesAutoresizingMaskIntoConstraints="NO" id="3463">
-                                <rect key="frame" x="265" y="208" width="238" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3711">
                                 <rect key="frame" x="342" y="506" width="89" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -109,6 +105,38 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TorsoComplete.png" translatesAutoresizingMaskIntoConstraints="NO" id="4095">
+                                <rect key="frame" x="265" y="211" width="238" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeadComplete.png" translatesAutoresizingMaskIntoConstraints="NO" id="4432">
+                                <rect key="frame" x="266" y="210" width="238" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LeftArmComplete.png" translatesAutoresizingMaskIntoConstraints="NO" id="4653">
+                                <rect key="frame" x="266" y="210" width="238" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RightArmComplete.png" translatesAutoresizingMaskIntoConstraints="NO" id="4774">
+                                <rect key="frame" x="266" y="210" width="238" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LeftLegComplete.png" translatesAutoresizingMaskIntoConstraints="NO" id="4855">
+                                <rect key="frame" x="266" y="210" width="238" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="RightLegComplete.png" translatesAutoresizingMaskIntoConstraints="NO" id="4936">
+                                <rect key="frame" x="266" y="210" width="238" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DigestionComplete.png" translatesAutoresizingMaskIntoConstraints="NO" id="5017">
+                                <rect key="frame" x="265" y="210" width="238" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lungs.png" translatesAutoresizingMaskIntoConstraints="NO" id="5138">
+                                <rect key="frame" x="266" y="210" width="238" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -118,13 +146,20 @@
                         <outlet property="LeftArmButton" destination="3743" id="name-outlet-3743"/>
                         <outlet property="LeftLegButton" destination="3745" id="name-outlet-3745"/>
                         <outlet property="LungButton" destination="2291" id="name-outlet-2291"/>
-                        <outlet property="LungComplete" destination="3463" id="name-outlet-3463"/>
                         <outlet property="MainView" destination="458" id="name-outlet-458"/>
                         <outlet property="NeckComplete" destination="3223" id="name-outlet-3223"/>
                         <outlet property="RightArmButton" destination="3744" id="name-outlet-3744"/>
                         <outlet property="RightLegButton" destination="3746" id="name-outlet-3746"/>
                         <outlet property="ThroatButton" destination="2292" id="name-outlet-2292"/>
                         <outlet property="TorsoButton" destination="3747" id="name-outlet-3747"/>
+                        <outlet property="TorsoComplete" destination="4095" id="name-outlet-4095"/>
+                        <outlet property="HeadComplete" destination="4432" id="name-outlet-4432"/>
+                        <outlet property="LeftArmComplete" destination="4653" id="name-outlet-4653"/>
+                        <outlet property="RightArmComplete" destination="4774" id="name-outlet-4774"/>
+                        <outlet property="LeftLegComplete" destination="4855" id="name-outlet-4855"/>
+                        <outlet property="RightLegComplete" destination="4936" id="name-outlet-4936"/>
+                        <outlet property="DigestionComplete" destination="5017" id="name-outlet-5017"/>
+                        <outlet property="LungComplete" destination="5138" id="name-outlet-5138"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="459" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -134,7 +169,7 @@
     </scenes>
     <resources>
         <image name="BodyModel.png" width="238" height="731"/>
-        <image name="Lungs.png" width="238" height="731"/>
+        <image name="Lungs.png" width="207" height="693"/>
         <image name="Neck.png" width="238" height="731"/>
         <image name="home.png" width="32" height="32"/>
         <image name="Account.png" width="32" height="32"/>
@@ -154,5 +189,13 @@
         <image name="BodymapSilhouetteComplete.png" width="238" height="731"/>
         <image name="SliderButton.png" width="54" height="54"/>
         <image name="ResultsGraph.png" width="571" height="324"/>
+        <image name="TorsoComplete.png" width="207" height="693"/>
+        <image name="HeadComplete.png" width="207" height="693"/>
+        <image name="LeftArmComplete.png" width="207" height="693"/>
+        <image name="RightArmComplete.png" width="207" height="693"/>
+        <image name="LeftLegComplete.png" width="207" height="693"/>
+        <image name="RightLegComplete.png" width="207" height="693"/>
+        <image name="DigestionComplete.png" width="207" height="693"/>
+        <image name="AlloverComplete.png" width="232" height="725"/>
     </resources>
 </document>

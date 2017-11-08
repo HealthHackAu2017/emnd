@@ -464,6 +464,14 @@
     <BundleResource Include="Resources\ResultsGraph.png" />
     <BundleResource Include="Resources\ResultsGraph%402x.png" />
     <BundleResource Include="Resources\ResultsGraph%403x.png" />
+    <BundleResource Include="Resources\TorsoComplete.png" />
+    <BundleResource Include="Resources\HeadComplete.png" />
+    <BundleResource Include="Resources\LeftArmComplete.png" />
+    <BundleResource Include="Resources\RightArmComplete.png" />
+    <BundleResource Include="Resources\LeftLegComplete.png" />
+    <BundleResource Include="Resources\RightLegComplete.png" />
+    <BundleResource Include="Resources\DigestionComplete.png" />
+    <BundleResource Include="Resources\AlloverComplete.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Remove="iTunesArtwork%402x" />

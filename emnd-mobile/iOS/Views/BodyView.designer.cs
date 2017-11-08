@@ -20,7 +20,15 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView DigestionComplete { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton HeadButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView HeadComplete { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -28,7 +36,15 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView LeftArmComplete { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton LeftLegButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView LeftLegComplete { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -52,7 +68,15 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView RightArmComplete { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton RightLegButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView RightLegComplete { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -62,6 +86,10 @@ namespace Emnd.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton TorsoButton { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView TorsoComplete { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (DigestionButton != null) {
@@ -69,9 +97,19 @@ namespace Emnd.iOS
                 DigestionButton = null;
             }
 
+            if (DigestionComplete != null) {
+                DigestionComplete.Dispose ();
+                DigestionComplete = null;
+            }
+
             if (HeadButton != null) {
                 HeadButton.Dispose ();
                 HeadButton = null;
+            }
+
+            if (HeadComplete != null) {
+                HeadComplete.Dispose ();
+                HeadComplete = null;
             }
 
             if (LeftArmButton != null) {
@@ -79,9 +117,19 @@ namespace Emnd.iOS
                 LeftArmButton = null;
             }
 
+            if (LeftArmComplete != null) {
+                LeftArmComplete.Dispose ();
+                LeftArmComplete = null;
+            }
+
             if (LeftLegButton != null) {
                 LeftLegButton.Dispose ();
                 LeftLegButton = null;
+            }
+
+            if (LeftLegComplete != null) {
+                LeftLegComplete.Dispose ();
+                LeftLegComplete = null;
             }
 
             if (LungButton != null) {
@@ -109,9 +157,19 @@ namespace Emnd.iOS
                 RightArmButton = null;
             }
 
+            if (RightArmComplete != null) {
+                RightArmComplete.Dispose ();
+                RightArmComplete = null;
+            }
+
             if (RightLegButton != null) {
                 RightLegButton.Dispose ();
                 RightLegButton = null;
+            }
+
+            if (RightLegComplete != null) {
+                RightLegComplete.Dispose ();
+                RightLegComplete = null;
             }
 
             if (ThroatButton != null) {
@@ -122,6 +180,11 @@ namespace Emnd.iOS
             if (TorsoButton != null) {
                 TorsoButton.Dispose ();
                 TorsoButton = null;
+            }
+
+            if (TorsoComplete != null) {
+                TorsoComplete.Dispose ();
+                TorsoComplete = null;
             }
         }
     }

@@ -63,11 +63,9 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1068" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" allowsSelection="NO">
                                         <rect key="frame" x="51" y="305" width="663" height="699"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="0" alpha="1"/>
                                         <prototypes/>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.49803921568627452" blue="0" alpha="1"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -105,8 +103,16 @@
         <image name="BodymapHeadNeckLungsLstomachArmsComplete.png" width="238" height="731"/>
         <image name="BodymapSilhouetteComplete.png" width="238" height="731"/>
         <image name="Neck.png" width="238" height="731"/>
-        <image name="Lungs.png" width="238" height="731"/>
+        <image name="Lungs.png" width="207" height="693"/>
         <image name="SliderButton.png" width="54" height="54"/>
         <image name="ResultsGraph.png" width="571" height="324"/>
+        <image name="TorsoComplete.png" width="207" height="693"/>
+        <image name="HeadComplete.png" width="207" height="693"/>
+        <image name="LeftArmComplete.png" width="207" height="693"/>
+        <image name="RightArmComplete.png" width="207" height="693"/>
+        <image name="LeftLegComplete.png" width="207" height="693"/>
+        <image name="RightLegComplete.png" width="207" height="693"/>
+        <image name="DigestionComplete.png" width="207" height="693"/>
+        <image name="AlloverComplete.png" width="232" height="725"/>
     </resources>
 </document>
