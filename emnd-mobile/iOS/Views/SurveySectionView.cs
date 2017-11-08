@@ -22,8 +22,6 @@ namespace Emnd.iOS
 
         public override void ViewDidLoad()
         {
-            // TODO: base view to get rid of keyboard
-
             base.ViewDidLoad();
             Log.Information("Survey Section load");
 
@@ -31,12 +29,23 @@ namespace Emnd.iOS
 
 
             var set = this.CreateBindingSet<SurveySectionView, SurveySectionViewModel>();
-            //set.Bind(SectionNameLabel).To(vm => vm.SectionName);
             set.Bind(SectionInfoLabel).To(vm => vm.CurrentSection.SectionInfo);
             set.Apply();
 
             this.QuestionTable.Source = new SectionQuestionTableSource(this.QuestionTable, ViewModel.SectionQuestions, ViewModel);
 
+            this.SkipButton.TouchUpInside += (sender, e) =>
+            {
+                ViewModel.CurrentSection.SectionCompleted = false;
+                ViewModel.CurrentSection.SectionSkipped = true;
+                ViewModel.CloseViewModelCommand.Execute(null);
+            };
+            this.DoneButton.TouchUpInside += (sender, e) =>
+            {
+                ViewModel.CurrentSection.SectionCompleted = true;
+                ViewModel.CurrentSection.SectionSkipped = false;
+                ViewModel.CloseViewModelCommand.Execute(null);
+            };
             //this.FeedbackTextField.ShouldReturn += SearchBar_ShouldReturn;
             //this.FeedbackButton.TouchUpInside += FeedbackButton_TouchUpInside;
             //RewardTable.KeyboardDismissMode = UIScrollViewKeyboardDismissMode.OnDrag;

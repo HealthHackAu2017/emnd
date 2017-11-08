@@ -36,6 +36,10 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView LungComplete { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIView MainView { get; set; }
 
         [Outlet]
@@ -83,6 +87,11 @@ namespace Emnd.iOS
             if (LungButton != null) {
                 LungButton.Dispose ();
                 LungButton = null;
+            }
+
+            if (LungComplete != null) {
+                LungComplete.Dispose ();
+                LungComplete = null;
             }
 
             if (MainView != null) {

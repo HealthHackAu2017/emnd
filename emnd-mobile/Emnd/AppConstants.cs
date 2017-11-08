@@ -7,7 +7,7 @@ namespace Emnd
         public const string MobileCenter_iOS = "";
         public static bool UseAzure => !string.IsNullOrWhiteSpace(MobileCenter_iOS);
 
-        public const string EmndServer = "http://192.168.0.2:5000/api/v1";
+        public const string EmndServer = "http://10.243.125.179:8000";
 
         public AppConstants()
         {

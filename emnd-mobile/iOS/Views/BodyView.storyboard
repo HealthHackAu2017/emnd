@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="688" fixedFrame="YES">
-                                <rect key="frame" x="230" y="85" width="307.5" height="123.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="688" fixedFrame="YES" adjustsFontForContentSizeCategory="YES">
+                                <rect key="frame" x="100" y="85" width="571" height="124"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Click on each area to complete your assessment. The following questions will ask you to report on your MND symptoms for a range of body regions. </string>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
@@ -47,11 +47,11 @@
                                     <color key="titleColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3223" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Neck.png">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3223" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Neck.png" hidden="YES">
                                 <rect key="frame" x="265" y="208" width="238" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3463" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Lungs.png">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3463" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Lungs.png" hidden="YES">
                                 <rect key="frame" x="265" y="208" width="238" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -119,6 +119,7 @@
                         <outlet property="LeftLegButton" destination="3745" id="name-outlet-3745"/>
                         <outlet property="RightLegButton" destination="3746" id="name-outlet-3746"/>
                         <outlet property="TorsoButton" destination="3747" id="name-outlet-3747"/>
+                        <outlet property="LungComplete" destination="3463" id="name-outlet-3463"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="459" userLabel="First Responder" sceneMemberID="firstResponder"/>

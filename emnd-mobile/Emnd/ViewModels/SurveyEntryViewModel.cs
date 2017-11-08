@@ -50,8 +50,6 @@ namespace Emnd
             Log.Information("Prepare view model with " + parameter);
             this.SectionName = parameter;
             Init();
-
-            //this.SectionName = "**** " + parameter;
             RaisePropertyChanged(nameof(this.SectionName));
             RaisePropertyChanged(nameof(this.CurrentSection));
         }
@@ -61,8 +59,8 @@ namespace Emnd
             if (CurrentSurvey == null)
             {
                 CurrentSurvey = new Survey();
-                CurrentSurvey.ParticipantName = "John";
-                CurrentSurvey.ParticipantID = "1234";
+                CurrentSurvey.ParticipantName = "Survey Participant";
+                CurrentSurvey.ParticipantID = "1";
                 CurrentSurvey.Weight = 74.0;
 
             }
@@ -79,12 +77,8 @@ namespace Emnd
             this.CurrentSection = sect.Find(e => e.SectionName.Equals(this.SectionName));
 
             var sq = new List<SurveyQuestion>();
-            //sq = this.Survey._questions;//.FindAll((obj) => obj.Section.Equals(this.SectionName));
             sq = this.Survey._questions.FindAll((obj) => (obj.Section == this.SectionName));
             this.SectionQuestions = sq;
-                
-
-            //// Questions in this section are
             foreach (SurveyQuestion q in sq)
             {
                 Log.Information($"Section question q= {q.Question} s={q.Section}");

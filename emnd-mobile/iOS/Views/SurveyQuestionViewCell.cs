@@ -22,8 +22,6 @@ namespace Emnd.iOS
 
         protected SurveyQuestionViewCell(IntPtr handle) : base(handle)
         {
-            // Note: this .ctor should not contain any initialization logic.
-            //AnswerSlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
         }
 
         // Bind manually when autobinding failed
@@ -41,14 +39,12 @@ namespace Emnd.iOS
             AnswerSlider.MinValue = (float)model.MinValue;
             AnswerSlider.MaxValue = (float)model.MaxValue;
             AnswerSlider.Value = (float)model.DefaultValue;
-            //UITapGestureRecognizer viewTapGR = new UITapGestureRecognizer(() =>
-            //{
-            //    //App.Navigation.ShowVideoPlaybackPage(vm);
-            //    ShowVideoPlayback(vm);
-            //});
-            //this.AddGestureRecognizer(viewTapGR);
 
-
+            AnswerSlider.ValueChanged += (sender, e) =>
+            {
+                Log.Information($"Setting value for {model.QuestionVariable} to {AnswerSlider.Value}");
+                model.AnswerValue = AnswerSlider.Value;
+            };
             this.SetNeedsDisplay();
         }
     }
