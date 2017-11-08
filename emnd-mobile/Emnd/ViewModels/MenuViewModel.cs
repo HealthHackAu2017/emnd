@@ -8,12 +8,10 @@ namespace Emnd
     public class MenuViewModel : MvxViewModel
     {
         private readonly IMvxNavigationService _navigationService;
-        public string UserName { get; set; }
 
         public MenuViewModel(IMvxNavigationService navigationService)
         {
             _navigationService = navigationService;
-            //UserName = "Hello binding";
         }
     }
 }

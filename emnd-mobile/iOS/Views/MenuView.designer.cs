@@ -16,13 +16,40 @@ namespace Emnd.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton AboutButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton DiaryButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton ProfileButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton ResearchButton { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (AboutButton != null) {
+                AboutButton.Dispose ();
+                AboutButton = null;
+            }
+
             if (DiaryButton != null) {
                 DiaryButton.Dispose ();
                 DiaryButton = null;
+            }
+
+            if (ProfileButton != null) {
+                ProfileButton.Dispose ();
+                ProfileButton = null;
+            }
+
+            if (ResearchButton != null) {
+                ResearchButton.Dispose ();
+                ResearchButton = null;
             }
         }
     }

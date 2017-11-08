@@ -65,10 +65,6 @@ namespace Emnd.iOS
             if (AppConstants.UseAzure)
             {
                 MobileCenter.Start(AppConstants.MobileCenter_iOS, typeof(Analytics), typeof(Crashes), typeof(Push));
-                Analytics.TrackEvent("Start", new Dictionary<string, string> {
-                            { "Type", "iOS" },
-                            { "Time", DateTime.Now.ToString()}
-                        });
             }
 
             //Display measuring

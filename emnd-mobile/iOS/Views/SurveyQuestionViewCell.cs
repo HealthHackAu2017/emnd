@@ -26,7 +26,7 @@ namespace Emnd.iOS
 
         // Bind manually when autobinding failed
         public bool IsBound;
-        public void BindModel(SurveySectionViewModel vm, SurveyQuestion model)
+        public void BindModel(SurveyEntryViewModel vm, SurveyQuestion model)
         {
             Log.Information("Cell manual bind");
             this.ContentView.ClearsContextBeforeDrawing = true;

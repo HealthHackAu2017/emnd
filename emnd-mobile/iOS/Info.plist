@@ -69,11 +69,11 @@
 	<string>Show your state</string>
 	<key>NSSiriUsageDescription</key>
 	<string>Record how you feel</string>
-	<key>CFBundleName</key>
-	<string>EMnd</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon-3.appiconset</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Assets.xcassets/LaunchImage.launchimage</string>
+	<key>CFBundleName</key>
+	<string>SHOWmndME</string>
 </dict>
 </plist>

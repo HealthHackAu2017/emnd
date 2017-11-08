@@ -88,7 +88,6 @@ namespace Emnd
             Device.BeginInvokeOnMainThread(() =>
             {
                 try       
-
                 {
                     UserDialogs.Instance.Alert(message, title);
                 }

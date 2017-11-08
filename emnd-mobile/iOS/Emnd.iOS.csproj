@@ -349,18 +349,9 @@
     <Compile Include="DebugTrace.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="Views\BaseView.cs" />
     <Compile Include="AkavacheSqliteLinkerOverride.cs" />
     <Compile Include="Views\TabRootView.cs" />
     <Compile Include="Views\TabRootView.designer.cs" />
-    <Compile Include="Views\SurveyView.cs" />
-    <Compile Include="Views\SurveyView.designer.cs">
-      <DependentUpon>SurveyView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ProfileView.cs" />
-    <Compile Include="Views\ProfileView.designer.cs">
-      <DependentUpon>ProfileView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\BodyView.cs" />
     <Compile Include="Views\BodyView.designer.cs">
       <DependentUpon>BodyView.cs</DependentUpon>
@@ -403,8 +394,6 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Views\TabRootView.storyboard" />
-    <InterfaceDefinition Include="Views\SurveyView.storyboard" />
-    <InterfaceDefinition Include="Views\ProfileView.storyboard" />
     <InterfaceDefinition Include="Views\BodyView.storyboard" />
     <InterfaceDefinition Include="Views\MenuView.storyboard" />
     <InterfaceDefinition Include="Views\SurveyEntryView.storyboard" />

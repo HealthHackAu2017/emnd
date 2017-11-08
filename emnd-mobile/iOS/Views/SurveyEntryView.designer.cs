@@ -16,19 +16,7 @@ namespace Emnd.iOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UISlider ComparisonSlider { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIView MainView { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel MyLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UISlider MySlider { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -40,7 +28,7 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UISlider SleepSlider { get; set; }
+        UIKit.UITableView QuestionTable { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -48,24 +36,9 @@ namespace Emnd.iOS
 
         void ReleaseDesignerOutlets ()
         {
-            if (ComparisonSlider != null) {
-                ComparisonSlider.Dispose ();
-                ComparisonSlider = null;
-            }
-
             if (MainView != null) {
                 MainView.Dispose ();
                 MainView = null;
-            }
-
-            if (MyLabel != null) {
-                MyLabel.Dispose ();
-                MyLabel = null;
-            }
-
-            if (MySlider != null) {
-                MySlider.Dispose ();
-                MySlider = null;
             }
 
             if (ParticipantIdEntry != null) {
@@ -78,9 +51,9 @@ namespace Emnd.iOS
                 ParticipantNameEntry = null;
             }
 
-            if (SleepSlider != null) {
-                SleepSlider.Dispose ();
-                SleepSlider = null;
+            if (QuestionTable != null) {
+                QuestionTable.Dispose ();
+                QuestionTable = null;
             }
 
             if (WeightEntry != null) {

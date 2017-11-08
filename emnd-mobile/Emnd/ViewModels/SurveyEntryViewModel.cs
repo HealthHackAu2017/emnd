@@ -22,7 +22,7 @@ namespace Emnd
             Log.Information("SurveyEntryViewModel constructor");
 
             _navigationService = App.Instance._nav;
-            SectionName = "Start";
+            SectionName = "Wellbeing";
             CloseViewModelCommand = new MvxAsyncCommand(async () => await _navigationService.Close(this));
             SendAsCSVCommand = new MvxAsyncCommand(async () =>
             {

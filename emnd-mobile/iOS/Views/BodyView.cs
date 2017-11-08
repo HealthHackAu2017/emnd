@@ -13,7 +13,6 @@ namespace Emnd.iOS
 {
     [MvxFromStoryboard("BodyView")]
     [MvxChildPresentation]
-    //[MvxTabPresentation(WrapInNavigationController = true, TabIconName = "home", TabName = "BodyMap")]
     public partial class BodyView : MvxViewController<BodyViewModel>
     {
         private int FirstLoad = 0;

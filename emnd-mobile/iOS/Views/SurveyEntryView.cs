@@ -7,6 +7,8 @@ using MvvmCross.iOS.Views.Presenters.Attributes;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using Serilog;
+using MvvmCross.Binding.iOS.Views;
+using System.Collections.Generic;
 
 namespace Emnd.iOS
 {
@@ -32,9 +34,9 @@ namespace Emnd.iOS
             NavigationItem.RightBarButtonItem = NavButton;
 
 
-            MySlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
-            ComparisonSlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
-            SleepSlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
+            //MySlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
+            //ComparisonSlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
+            //SleepSlider.SetThumbImage(UIImage.FromFile("SliderButton.png"), UIControlState.Normal);
 
             var set = this.CreateBindingSet<SurveyEntryView, SurveyEntryViewModel>();
             set.Bind(ParticipantNameEntry).To(vm => vm.Survey.ParticipantName);
@@ -42,6 +44,11 @@ namespace Emnd.iOS
             set.Bind(WeightEntry).To(vm => vm.Survey.Weight);
             //set.Bind(SendButton).To(vm => vm.ShowBodyMapCommand);
             set.Apply();
+
+            ViewModel.SectionName = "Wellbeing";
+            ViewModel.Init();
+            this.QuestionTable.Source = new SectionQuestionTableSource(this.QuestionTable, ViewModel.SectionQuestions, ViewModel);
+
         }
 
         public override void ViewDidAppear(bool animated)
@@ -49,5 +56,36 @@ namespace Emnd.iOS
             base.ViewDidAppear(animated);
             Log.Information("Survey Start appeared");
         }
+
+        protected class SectionQuestionTableSource : MvxTableViewSource
+        {
+            List<SurveyQuestion> TableSourceViewModel;
+            SurveyEntryViewModel baseViewModel;
+            public override nint RowsInSection(UITableView tableview, nint section) => ((TableSourceViewModel != null) ? TableSourceViewModel.Count : 0);
+            public override nint NumberOfSections(UITableView tableView) => 1;
+
+            public SectionQuestionTableSource(UITableView tableView, List<SurveyQuestion> viewModel, SurveyEntryViewModel baseViewModel) : base(tableView)
+            {
+                tableView.RegisterNibForCellReuse(UINib.FromName(SurveyQuestionViewCell.Key, NSBundle.MainBundle), SurveyQuestionViewCell.Key);
+                this.TableSourceViewModel = viewModel;
+                this.baseViewModel = baseViewModel;
+            }
+
+            protected override UITableViewCell GetOrCreateCellFor(UITableView tableView, NSIndexPath indexPath, object item)
+            {
+                UITableViewCell cell = null;
+                SurveyQuestion model = this.TableSourceViewModel[indexPath.Row];
+                if (model != null)
+                {
+                    cell = (UITableViewCell)tableView.DequeueReusableCell(SurveyQuestionViewCell.Key);
+                    if ((cell is SurveyQuestionViewCell) && !((SurveyQuestionViewCell)cell).IsBound)
+                    {
+                        ((SurveyQuestionViewCell)cell).BindModel(this.baseViewModel, model);
+                    }
+                }
+                return cell;
+            }
+        }
+
     }
 }

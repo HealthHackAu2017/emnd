@@ -38,8 +38,6 @@ namespace Emnd
         Task<HttpResponseMessage> GET(string uri);
 
         /// <summary> Makes a POST to server </summary>
-        /// <param name="apiuri">Should just be the api uri. Domain is stored in the service</param>
-        /// <param name="data">May be null. Must be a Json formatted string</param>
         Task<HttpResponseMessage> POST(string apiuri, string data = null);
 
         Task<HttpResponseMessage> PUT(string api, string data);
@@ -75,10 +73,6 @@ namespace Emnd
 		const string AppVersionKey = "x-app-version";
         private string AppVersionValue = DisplayInfo.VersionAndBuildNumber;
 
-        //Endpoints
-        public const string UserAuthenticationToken = "/Users/Authenticate";
-
-
         HttpClient _client;
         HttpClient Client => _client ?? (_client = new HttpClient(Handler));
         HttpClientHandler _handler;
@@ -89,7 +83,7 @@ namespace Emnd
 
         private void CheckConnection()
         {
-            Log.Information("Checking connection to Rubin platform");
+            Log.Information("Checking connection to server platform");
             CrossConnectivity.Current.ConnectivityTypeChanged += (sender, args) =>
             {
                 Log.Information($"Connectivity changed to {args.IsConnected}");
@@ -103,7 +97,6 @@ namespace Emnd
 
                 if (!resp.Result)
                 {
-                    //ToastMessage("Internet required", "Cannot connect to server " + AppConstants.RubinServer);
                     Log.Error("Cannot connect to server " + AppConstants.EmndServer);
                 }
             }));

@@ -87,9 +87,6 @@ namespace Emnd
                     Log.Information($"Attach log file request {AppSettings.LastLogFile}");
                     //Log.CloseAndFlush();
 
-                    //FIXME append errorreport
-                    //append to logfile ErrorReport crashReport = await Crashes.GetLastSessionCrashReportAsync();
-
                     var emailMessenger = CrossMessaging.Current.EmailMessenger;
                     if (emailMessenger.CanSendEmailAttachments)
                     {
