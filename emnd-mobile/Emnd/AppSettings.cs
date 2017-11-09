@@ -20,15 +20,39 @@ namespace Emnd
             }
         }
 
-        public static string UserName
+        public static string ParticipantName
         {
             get
             {
-                return ISettings.GetValueOrDefault("username", "");
+                return ISettings.GetValueOrDefault("ParticipantName", "");
             }
             set
             {
-                ISettings.AddOrUpdateValue("username", value);
+                ISettings.AddOrUpdateValue("ParticipantName", value);
+            }
+        }
+
+        public static string ParticipantId
+        {
+            get
+            {
+                return ISettings.GetValueOrDefault("ParticipantId", "");
+            }
+            set
+            {
+                ISettings.AddOrUpdateValue("ParticipantId", value);
+            }
+        }
+
+        public static double ParticipantWeight
+        {
+            get
+            {
+                return ISettings.GetValueOrDefault("ParticipantWeight", 0d);
+            }
+            set
+            {
+                ISettings.AddOrUpdateValue("ParticipantWeight", value);
             }
         }
 
@@ -57,25 +81,9 @@ namespace Emnd
         }
 
         /// <summary>
-        /// Whether the user has completed onboarding steps
-        /// </summary>
-        /// <value><c>true</c> if is onboarded; otherwise, <c>false</c>.</value>
-        public static bool IsOnboarded
-        {
-            get
-            {
-                return ISettings.GetValueOrDefault("isonboarded", false);
-            }
-            set
-            {
-                ISettings.AddOrUpdateValue("isonboarded", value);
-            }
-        }
-
-        /// <summary>
         /// Has a token from a previous login (which may no longer be valid)
         /// </summary>
-        public static bool HasToken => ISettings.Contains("apitoken");
+        public static bool HasHistory => ISettings.Contains("StoredAnswers");
 
         public static bool CanLogin
         {
@@ -99,7 +107,7 @@ namespace Emnd
         {
             get
             {
-                string json = ISettings.GetValueOrDefault("qanswers", "");
+                string json = ISettings.GetValueOrDefault("StoredAnswers", "");
                 return JsonData.FromJsonString<List<long>>(json);
                 //return JsonConvert.DeserializeObject<List<long>>(json, Converter.Settings);
             }
@@ -107,11 +115,11 @@ namespace Emnd
             {
                 if (value == null)
                 {
-                    ISettings.Remove("qanswers");
+                    ISettings.Remove("StoredAnswers");
                 }
                 else
                 {
-                    ISettings.AddOrUpdateValue("qanswers", JsonData.AsJsonString(value));
+                    ISettings.AddOrUpdateValue("StoredAnswers", JsonData.AsJsonString(value));
                 }
             }
         }
@@ -122,7 +130,6 @@ namespace Emnd
         public static void LogoutUser()
         {
             AppSettings.Password = "";
-            AppSettings.IsOnboarded = false;
             AppSettings.StoredAnswers = null;
         }
 

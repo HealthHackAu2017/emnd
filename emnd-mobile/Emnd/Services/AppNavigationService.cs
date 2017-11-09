@@ -11,6 +11,7 @@ namespace Emnd
     public interface IAppNavigationService
     {
         void ToastMessage(string title, string message);
+        void ShowAlert(string message, string title = "SHOWmndME");
         void ShowTodoInfo(string message, string phase = "Todo");
         void ShowError(string usermessage, string loggedmessage = null);
         void ShowAPIError(string usermessage, string loggedmessage = null);
@@ -80,6 +81,23 @@ namespace Emnd
                     Log.Error(ex.Message);
                 }
             });
+        }
+
+        public void ShowAlert(string message, string title = "SHOWmndME")
+        {
+            Log.Information($"ShowAlert: {title} {message}");
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                try
+                {
+                    UserDialogs.Instance.Alert(message, title);
+                }
+                catch (Exception ex)
+                {
+                    Log.Error(ex.Message);
+                }
+            });
+
         }
 
         public void ShowTodoInfo(string message, string title = "Todo")

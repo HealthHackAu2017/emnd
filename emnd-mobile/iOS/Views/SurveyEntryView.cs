@@ -52,7 +52,6 @@ namespace Emnd.iOS
             ViewModel.SectionName = "Wellbeing";
             ViewModel.Init();
             this.QuestionTable.Source = new SectionQuestionTableSource(this.QuestionTable, ViewModel.SectionQuestions, ViewModel);
-
         }
 
         public override void ViewDidAppear(bool animated)

@@ -28,7 +28,7 @@
     <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
-    <CodesignProvision>VS: com.biotelligent.emnd Development</CodesignProvision>
+    <CodesignProvision>showmndme_dev</CodesignProvision>
 <MtouchFloat32>true</MtouchFloat32>
 <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
 <OptimizePNGs>false</OptimizePNGs>
@@ -41,14 +41,14 @@
     <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;QA</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: Justin Holloway (QV4AHHCZY3)</CodesignKey>
+    <CodesignKey>iPhone Distribution: Biotelligent Ltd (Z3B5YJH5EM)</CodesignKey>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignEntitlements></CodesignEntitlements>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
-    <CodesignProvision>VS: com.biotelligent.emnd Development</CodesignProvision>
+    <CodesignProvision>showmndme_appstore</CodesignProvision>
     <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <OptimizePNGs>false</OptimizePNGs>
     <MtouchFastDev>false</MtouchFastDev>
@@ -60,13 +60,13 @@
     <DefineConstants>__IOS__;__MOBILE__;__UNIFIED__;QA</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: Justin Holloway (QV4AHHCZY3)</CodesignKey>
+    <CodesignKey>iPhone Distribution: Biotelligent Ltd (Z3B5YJH5EM)</CodesignKey>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchLink>None</MtouchLink>
     <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
-    <CodesignProvision>VS: com.biotelligent.emnd Development</CodesignProvision>
+    <CodesignProvision>showmndme_appstore</CodesignProvision>
 <AssemblyName>Emnd.iOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
@@ -89,7 +89,7 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
-    <CodesignProvision>VS: com.biotelligent.emnd Development</CodesignProvision>
+    <CodesignProvision>showmndme_dev</CodesignProvision>
 <BuildIpa>false</BuildIpa>
   </PropertyGroup>
   <ItemGroup>

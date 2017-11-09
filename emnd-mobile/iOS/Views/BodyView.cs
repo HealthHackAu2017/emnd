@@ -25,7 +25,7 @@ namespace Emnd.iOS
             base.ViewDidLoad();
             Log.Information("MenuView load");
 
-            NavigationItem.Title = ViewModel.SectionName;
+            NavigationItem.Title = "Body";
             var NavButton = new UIBarButtonItem();
             NavButton.Title = "SAVE";
             NavButton.Clicked += SaveButton_Clicked;
@@ -75,17 +75,15 @@ namespace Emnd.iOS
             base.ViewDidAppear(animated);
             Log.Information("Body View appear");
 
-            if (FirstLoad++ > 1)
-            {
-                if (NeckComplete.Hidden)
-                {
-                    NeckComplete.Hidden = false;
-                }
-                else if (LungComplete.Hidden)
-                {
-                    LungComplete.Hidden = false;
-                }
-            }
+            HeadComplete.Hidden = ViewModel.Survey._sections.Find(s => s.SectionName == "Mental Health").NotAnswered;
+            NeckComplete.Hidden = ViewModel.Survey._sections.Find(s => s.SectionName == "Saliva").NotAnswered;
+            LungComplete.Hidden = ViewModel.Survey._sections.Find(s => s.SectionName == "Breathing").NotAnswered;
+            TorsoComplete.Hidden = ViewModel.Survey._sections.Find(s => s.SectionName == "Torso").NotAnswered;
+            DigestionComplete.Hidden = ViewModel.Survey._sections.Find(s => s.SectionName == "Digestion").NotAnswered;
+            LeftArmComplete.Hidden = ViewModel.Survey._sections.Find(s => s.SectionName == "Left arm").NotAnswered;
+            RightArmComplete.Hidden = ViewModel.Survey._sections.Find(s => s.SectionName == "Right arm").NotAnswered;
+            LeftLegComplete.Hidden = ViewModel.Survey._sections.Find(s => s.SectionName == "Left leg").NotAnswered;
+            RightLegComplete.Hidden = ViewModel.Survey._sections.Find(s => s.SectionName == "Right leg").NotAnswered;
         }
 
         async void SaveButton_Clicked(object sender, EventArgs e)

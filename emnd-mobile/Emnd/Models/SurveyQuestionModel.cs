@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Serilog;
 
 namespace Emnd
 {
@@ -27,28 +28,73 @@ namespace Emnd
             public string SectionName { get; set; }
             public string SectionInfo { get; set; }
             public bool SectionSkipped { get; set; }
-            public bool SectionCompleted { get; set; }
-
-        public List<SurveyQuestion> SectionQuestions { get; set; }
-        //{
-        //    get
-        //    {
-        //        return new List<SurveyQuestion>();
-        //    }
-        //}
-            
+            public bool Answered { get; set; }
+            public bool NotAnswered => !Answered && !SectionSkipped;
+            public string CompletionText => SectionSkipped ? "no symptoms" : (Answered ? "completed" : "");
+            public List<SurveyQuestion> SectionQuestions { get; set; }
         }
 
     public partial class Survey
     {
-        public DateTime SurveyDate { get; set; }
-        public string SurveyYYYYMMDD { get; set; }
+        public Survey()
+        {
+            SurveyDate = DateTime.Now;
+            SurveyGUID = Guid.NewGuid().ToString();
+            ParticipantName = AppSettings.ParticipantName;
+            ParticipantID = AppSettings.ParticipantId;
+            Weight = AppSettings.ParticipantWeight;
+
+            _sections = NewSections();
+            _questions = NewQuestions();
+        }
+
         public string ParticipantName { get; set; }
         public string ParticipantID { get; set; }
-        public bool EnteredByParticipant { get; set; }
-        public string EnteredBy { get; set; }
         public double Weight { get; set; } // == Question D21 (entered via keyboard not slider)
+        public DateTime SurveyDate { get; set; }
+        public string SurveyGUID { get; set; }
+        public string SurveyYYYYMMDD => SurveyDate.ToString("yyyyMMdd");
         public SurveySection CurrentSection { get; set; }
+
+        public Dictionary<string, string> AsDictionary() 
+        {
+            var dict = new Dictionary<string, string>{
+                {"study", "uqmndv1"},
+                {"name", ParticipantName},
+                {"user_id", ParticipantID},
+                {"submission_date", SurveyDate.ToString()},
+                {"submission", SurveyYYYYMMDD}
+            };
+            foreach (var s in _sections)
+            {
+                dict.Add(s.SectionVariable, s.CompletionText);
+            }
+            dict.Add("D21", Weight.ToString());
+            foreach (var q in _questions)
+            {
+                dict.Add(q.QuestionVariable, Math.Round(q.AnswerValue,1).ToString());
+            }
+                     
+            return dict;
+        }
+        public List<string> AsCSV()
+        {
+            var surveyresults = AsDictionary();
+            var csv = new List<string>();
+            csv.Add("Participant, SurveyID, Variable, Value");
+            foreach (var response in surveyresults)
+            {
+                csv.Add($"{ParticipantID}, {SurveyYYYYMMDD}, {response.Key}, {response.Value}");
+            }
+            return csv;
+        }
+        public string AsEmail()
+        {
+            var surveyresults = AsCSV();
+            var email = string.Empty;
+            foreach (var line in surveyresults) email += line + "\n";
+            return email;
+        }
 
         public List<SurveySection> _sections;
         public List<SurveySection> NewSections()
@@ -81,7 +127,7 @@ namespace Emnd
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D15", Question = "Today I feel", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Wellbeing", MinText = "Bad", MaxText = "Good" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D16", Question = "Compared to this time two weeks ago, I feel", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Wellbeing", MinText = "Bad", MaxText = "Good" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D20c", Question = "I am sleeping", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Wellbeing", MinText = "Poorly", MaxText = "Well" });
-               // _questions.Add(new SurveyQuestion { QuestionVariable = "D21", Question = "Today I weigh", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 74, Section = "Wellbeing", MinText = "", MaxText = "kg" });
+                // _questions.Add(new SurveyQuestion { QuestionVariable = "D21", Question = "Today I weigh", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 74, Section = "Wellbeing", MinText = "", MaxText = "kg" });
 
                 _questions.Add(new SurveyQuestion { QuestionVariable = "X1", Question = "Depression", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Mental Health", MinText = "Low", MaxText = "High" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "X2", Question = "Anxiety", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Mental Health", MinText = "Low", MaxText = "High" });
@@ -126,7 +172,24 @@ namespace Emnd
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D19e.TO", Question = "Pain", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D19f.TO", Question = "Physical Fatigue", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
                 _questions.Add(new SurveyQuestion { QuestionVariable = "D19g.TO", Question = "Wasting", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Torso", MinText = "None", MaxText = "Severe" });
-}
+
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19a.LL", Question = "Twitching", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Left leg", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19b.LL", Question = "Cramping", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Left leg", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19d.LL", Question = "Weakness", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Left leg", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19c.LL", Question = "Stiffness", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Left leg", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19e.LL", Question = "Pain", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Left leg", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19f.LL", Question = "Physical Fatigue", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Left leg", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19g.LL", Question = "Wasting", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Left leg", MinText = "None", MaxText = "Severe" });
+
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19a.RL", Question = "Twitching", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Right leg", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19b.RL", Question = "Cramping", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Right leg", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19c.RL", Question = "Weakness", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Right leg", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19d.RL", Question = "Stiffness", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Right leg", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19e.RL", Question = "Pain", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Right leg", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19f.RL", Question = "Physical Fatigue", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Right leg", MinText = "None", MaxText = "Severe" });
+                _questions.Add(new SurveyQuestion { QuestionVariable = "D19g.RL", Question = "Wasting", MinValue = 0, MaxValue = 100, Scale = 20, DefaultValue = 50, Section = "Right leg", MinText = "None", MaxText = "Severe" });
+
+            }
             return _questions;
         }
 

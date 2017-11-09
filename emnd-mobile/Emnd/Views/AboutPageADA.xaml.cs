@@ -95,7 +95,7 @@ namespace Emnd
  
                         var email = new EmailMessageBuilder()
                           .To("jholloway@gmail.com")
-                          .Subject("Support request").Body("Log files for " + AppSettings.UserName + "\n\nPlease describe the issue you are experiencing:\n")
+                          .Subject("Support request").Body("Log files for " + AppSettings.ParticipantName + "\n\nPlease describe the issue you are experiencing:\n")
                               .WithAttachment(AppSettings.LastLogFile, "text/*")
                               .Build();
 

@@ -41,6 +41,7 @@ namespace Emnd.iOS
             AnswerSlider.ValueChanged += (sender, e) =>
             {
                 Log.Information($"Setting value for {model.QuestionVariable} to {AnswerSlider.Value}");
+                model.Answered = true;
                 model.AnswerValue = AnswerSlider.Value;
             };
             this.SetNeedsDisplay();

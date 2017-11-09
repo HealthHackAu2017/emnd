@@ -36,13 +36,13 @@ namespace Emnd.iOS
 
             this.SkipButton.TouchUpInside += (sender, e) =>
             {
-                ViewModel.CurrentSection.SectionCompleted = false;
+                ViewModel.CurrentSection.Answered = false;
                 ViewModel.CurrentSection.SectionSkipped = true;
                 ViewModel.CloseViewModelCommand.Execute(null);
             };
             this.DoneButton.TouchUpInside += (sender, e) =>
             {
-                ViewModel.CurrentSection.SectionCompleted = true;
+                ViewModel.CurrentSection.Answered = true;
                 ViewModel.CurrentSection.SectionSkipped = false;
                 ViewModel.CloseViewModelCommand.Execute(null);
             };
