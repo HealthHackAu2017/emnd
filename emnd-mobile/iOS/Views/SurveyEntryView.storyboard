@@ -25,33 +25,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="321-KC-VSc">
-                                <rect key="frame" x="-0.2285714" y="-2.273737E-13" width="768" height="1024"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="128" y="-2.273737E-13" width="767.5" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" alignment="top" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="kdX-i4-NTD">
-                                        <rect key="frame" x="51" y="120" width="663" height="157"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="51" y="120" width="497" height="157"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mNe-2o-cIT">
-                                                <rect key="frame" x="0.0" y="0.0" width="663" height="157"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="497" height="157"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Participant Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="464">
-                                                        <rect key="frame" x="0.0" y="0.0" width="663" height="39"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="497" height="39"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Participant ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="465">
-                                                        <rect key="frame" x="0.0" y="59" width="663" height="39"/>
+                                                        <rect key="frame" x="0.0" y="59" width="497" height="39"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight (kg)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="466">
-                                                        <rect key="frame" x="0.0" y="118" width="663" height="39"/>
+                                                        <rect key="frame" x="0.0" y="118" width="497" height="39"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -60,9 +60,9 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1068" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" allowsSelection="NO">
-                                        <rect key="frame" x="51" y="305" width="663" height="699"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1068" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" allowsSelection="NO" keyboardDismissMode="onDrag">
+                                        <rect key="frame" x="53" y="305" width="663" height="699"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         <prototypes/>
                                     </tableView>
                                 </subviews>

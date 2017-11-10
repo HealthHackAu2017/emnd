@@ -52,6 +52,25 @@ namespace Emnd.iOS
             ViewModel.SectionName = "Wellbeing";
             ViewModel.Init();
             this.QuestionTable.Source = new SectionQuestionTableSource(this.QuestionTable, ViewModel.SectionQuestions, ViewModel);
+
+            // Dismiss the keyboard on background tap
+            var g = new UITapGestureRecognizer(() => View.EndEditing(true));
+            g.CancelsTouchesInView = false;
+            View.AddGestureRecognizer(g);
+
+            WeightEntry.ShouldReturn += (UITextField textField) => {
+                DismissKeyboard(textField);
+                return false; // Don't want the return key
+            };
+        }
+
+        protected virtual void DismissKeyboard(UITextField textfield = null)
+        {
+            View.EndEditing(true);
+            if (textfield != null)
+            {
+                if (textfield.CanResignFirstResponder) textfield.ResignFirstResponder();
+            }
         }
 
         public override void ViewDidAppear(bool animated)
