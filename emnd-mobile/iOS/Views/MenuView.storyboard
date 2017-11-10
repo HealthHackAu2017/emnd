@@ -1,92 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="464" useTraitCollections="YES">
-    <device id="ipad9_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="464" useTraitCollections="YES" useSafeAreas="YES">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
         <scene sceneID="463">
             <objects>
                 <viewController id="464" sceneMemberID="viewController" customClass="MenuView" storyboardIdentifier="MenuView">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="461"/>
-                        <viewControllerLayoutGuide type="bottom" id="462"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="465">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <view key="view" contentMode="scaleToFill" id="697" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="0.0" width="954" height="888"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="699" fixedFrame="YES">
+                                <rect key="frame" x="188" y="108.5" width="522" height="807"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="698">
-                                        <rect key="frame" x="0.0" y="0.0" width="954" height="888"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="700" distribution="equalSpacing">
+                                        <rect key="frame" x="0.0" y="0.0" width="522" height="233"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="699">
-                                                <rect key="frame" x="114" y="110" width="578" height="807"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="700">
-                                                        <rect key="frame" x="0.0" y="0.0" width="578" height="233"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="701">
-                                                                <rect key="frame" x="0.0" y="0.0" width="289" height="233"/>
-                                                                <state key="normal" title="Button" image="Mnd.png"/>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="702">
-                                                                <rect key="frame" x="289" y="0.0" width="289" height="233"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                <state key="normal" title="Button" image="Profile.png"/>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="703">
-                                                        <rect key="frame" x="0.0" y="287" width="578" height="233"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="704">
-                                                                <rect key="frame" x="0.0" y="0.0" width="289" height="233"/>
-                                                                <state key="normal" title="Button" image="Diary.png"/>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="705">
-                                                                <rect key="frame" x="289" y="0.0" width="289" height="233"/>
-                                                                <state key="normal" title="Button" image="Research.png"/>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="706">
-                                                        <rect key="frame" x="0.0" y="574" width="578" height="233"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="707">
-                                                                <rect key="frame" x="0.0" y="0.0" width="289" height="233"/>
-                                                                <state key="normal" title="Button" image="Team.png"/>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="708">
-                                                                <rect key="frame" x="289" y="0.0" width="289" height="233"/>
-                                                                <state key="normal" title="Button" image="Appointments.png"/>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="701">
+                                                <rect key="frame" x="0.0" y="0.0" width="287" height="233"/>
+                                                <state key="normal" image="Mnd.png" title="           "/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="702">
+                                                <rect key="frame" x="287" y="0.0" width="235" height="233"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" image="Profile.png"/>
+                                            </button>
                                         </subviews>
-                                    </view>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="703" distribution="equalSpacing">
+                                        <rect key="frame" x="0.0" y="287" width="522" height="233"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="704">
+                                                <rect key="frame" x="0.0" y="0.0" width="287" height="233"/>
+                                                <state key="normal" image="Diary.png" title="           "/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="705">
+                                                <rect key="frame" x="287" y="0.0" width="235" height="233"/>
+                                                <state key="normal" image="Research.png"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="706" distribution="equalSpacing">
+                                        <rect key="frame" x="0.0" y="574" width="522" height="233"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="707">
+                                                <rect key="frame" x="0.0" y="0.0" width="287" height="233"/>
+                                                <state key="normal" image="Team.png" title="           "/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1326">
+                                                <rect key="frame" x="287" y="0.0" width="235" height="233"/>
+                                                <state key="normal" image="Appointments.png"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <variation key="widthClass=regular"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinX="YES" flexibleMaxY="YES" flexibleMinY="YES"/>
+                            </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="994"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="1" blue="1" alpha="1"/>
                     </view>
                     <connections>
-                        <outlet property="DiaryButton" destination="704" id="name-outlet-704"/>
+                        <outlet property="MainView" destination="465" id="name-outlet-465"/>
                         <outlet property="AboutButton" destination="701" id="name-outlet-701"/>
+                        <outlet property="DiaryButton" destination="704" id="name-outlet-704"/>
+                        <outlet property="TeamButton" destination="707" id="name-outlet-707"/>
                         <outlet property="ProfileButton" destination="702" id="name-outlet-702"/>
-                        <outlet property="ResearchButton" destination="705" id="name-outlet-705"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="466" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -113,13 +99,21 @@
         <image name="BodymapHeadNeckLungsLstomachArmsComplete.png" width="238" height="731"/>
         <image name="BodymapSilhouetteComplete.png" width="238" height="731"/>
         <image name="Neck.png" width="238" height="731"/>
-        <image name="Lungs.png" width="238" height="731"/>
+        <image name="Lungs.png" width="207" height="693"/>
         <image name="SliderButton.png" width="54" height="54"/>
         <image name="ResultsGraph.png" width="571" height="324"/>
+        <image name="TorsoComplete.png" width="207" height="693"/>
+        <image name="HeadComplete.png" width="207" height="693"/>
+        <image name="LeftArmComplete.png" width="207" height="693"/>
+        <image name="RightArmComplete.png" width="207" height="693"/>
+        <image name="LeftLegComplete.png" width="207" height="693"/>
+        <image name="RightLegComplete.png" width="207" height="693"/>
+        <image name="DigestionComplete.png" width="207" height="693"/>
+        <image name="AlloverComplete.png" width="232" height="725"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="ipad9_7.fullscreen"/>
+        <simulatedScreenMetrics key="destination" type="ipad12_9.fullscreen"/>
     </simulatedMetricsContainer>
 </document>

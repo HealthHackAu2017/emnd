@@ -18,11 +18,20 @@ namespace Emnd.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextView AboutText { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView MainView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (AboutText != null) {
                 AboutText.Dispose ();
                 AboutText = null;
+            }
+
+            if (MainView != null) {
+                MainView.Dispose ();
+                MainView = null;
             }
         }
     }
