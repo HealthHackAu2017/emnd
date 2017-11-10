@@ -23,20 +23,20 @@ namespace Emnd.iOS
             base.ViewDidLoad();
             Log.Information("MenuView load");
 
-            //DiaryButton.TouchUpInside += (sender, e) =>
-            //{
-            //    this.TabBarController.SelectedIndex = 1;
-            //};
+            DiaryButton.TouchUpInside += (sender, e) =>
+            {
+                this.TabBarController.SelectedIndex = 1;
+            };
 
-            //ProfileButton.TouchUpInside += (sender, e) =>
-            //{
-            //    this.TabBarController.SelectedIndex = 2;
-            //};
+            ProfileButton.TouchUpInside += (sender, e) =>
+            {
+                this.TabBarController.SelectedIndex = 2;
+            };
 
-            //AboutButton.TouchUpInside += (sender, e) =>
-            //{
-            //    this.TabBarController.SelectedIndex = 3;
-            //};
+            AboutButton.TouchUpInside += (sender, e) =>
+            {
+                this.TabBarController.SelectedIndex = 3;
+            };
 
         }
     }

@@ -14,10 +14,10 @@
                 <viewController id="464" sceneMemberID="viewController" customClass="MenuView" storyboardIdentifier="MenuView">
                     <view key="view" contentMode="scaleToFill" id="465">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" heightSizable="YES" widthSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="699" fixedFrame="YES">
-                                <rect key="frame" x="188" y="108.5" width="522" height="807"/>
+                                <rect key="frame" x="422" y="108.5" width="522" height="807"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="700" distribution="equalSpacing">
                                         <rect key="frame" x="0.0" y="0.0" width="522" height="233"/>
@@ -65,7 +65,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="994"/>
-                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="1" blue="1" alpha="1"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                     </view>
                     <connections>
                         <outlet property="MainView" destination="465" id="name-outlet-465"/>
