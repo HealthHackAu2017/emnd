@@ -380,6 +380,7 @@
     <Compile Include="Views\ResultsGraphView.designer.cs">
       <DependentUpon>ResultsGraphView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Renderers\CustomProgressBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Entitlements.plist" />
@@ -407,6 +408,7 @@
     <Folder Include="Assets.xcassets\RQLogo.imageset\" />
     <Folder Include="Assets.xcassets\LaunchImageLogo.launchimage\" />
     <Folder Include="Assets.xcassets\AppIconRQ.appiconset\" />
+    <Folder Include="Renderers\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Remove="Resources\Weather\Cloudy.png" />

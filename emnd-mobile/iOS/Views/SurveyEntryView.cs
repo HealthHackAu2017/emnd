@@ -79,6 +79,16 @@ namespace Emnd.iOS
             Log.Information("Survey Start appeared");
         }
 
+        public override void DidRotate(UIInterfaceOrientation fromInterfaceOrientation)
+        {
+            base.DidRotate(fromInterfaceOrientation);
+            if (this.QuestionTable.Source != null)
+            {
+                Log.Information("Reloading table after rotation");
+                QuestionTable.ReloadData();
+            }
+        }
+
         protected class SectionQuestionTableSource : MvxTableViewSource
         {
             List<SurveyQuestion> TableSourceViewModel;

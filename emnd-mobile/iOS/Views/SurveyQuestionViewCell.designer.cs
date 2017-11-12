@@ -27,7 +27,15 @@ namespace Emnd.iOS
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIProgressView ProgressView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel QuestionLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIView SliderProgressView { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -46,9 +54,19 @@ namespace Emnd.iOS
                 MinLabel = null;
             }
 
+            if (ProgressView != null) {
+                ProgressView.Dispose ();
+                ProgressView = null;
+            }
+
             if (QuestionLabel != null) {
                 QuestionLabel.Dispose ();
                 QuestionLabel = null;
+            }
+
+            if (SliderProgressView != null) {
+                SliderProgressView.Dispose ();
+                SliderProgressView = null;
             }
         }
     }
