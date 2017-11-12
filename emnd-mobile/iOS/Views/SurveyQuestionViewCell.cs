@@ -43,8 +43,9 @@ namespace Emnd.iOS
             ProgressView.Progress = AnswerSlider.Value / AnswerSlider.MaxValue;
 
             // Render the change continuously and not just when released
-            AnswerSlider.Continuous = true;
-            ProgressView.ProgressTintColor = AnswerSlider.MinimumTrackTintColor;
+            //AnswerSlider.Continuous = true;
+            //ProgressView.ProgressTintColor = AnswerSlider.MinimumTrackTintColor;
+            //ProgressView.Hidden = true;
 
             AnswerSlider.ValueChanged += (sender, e) =>
             {
@@ -56,13 +57,13 @@ namespace Emnd.iOS
             this.SetNeedsDisplay();
         }
 
-        bool IsLaidOut = false;
+        //bool IsLaidOut = false;
         public override void LayoutSubviews()
         {
-            Log.Information($"Cell layout subviews IsLaidOut={IsLaidOut}");
+            //Log.Information($"Cell layout subviews IsLaidOut={IsLaidOut}");
             base.LayoutSubviews();
 
-            UpdateFrame();
+            //UpdateFrame();
         }
 
         private void UpdateFrame()
