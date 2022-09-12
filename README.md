@@ -21,5 +21,5 @@ pip3 install -r requirement.txt
 ```
 3. Start the Django server<br>
 ```
-python3 manage.py runserver
+python3 manage.py runserver 2
 ```
